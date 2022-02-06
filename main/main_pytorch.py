@@ -51,7 +51,7 @@ def evaluate(model, generator, data_type, max_iteration, cuda):
     targets = dict['target']    # (audios_num, classes_num)
     
     predictions = np.argmax(outputs, axis=-1)   # (audios_num,)
-
+    scores=outputs[:,-1]
     # Evaluate
     classes_num = outputs.shape[-1]
 
@@ -59,7 +59,7 @@ def evaluate(model, generator, data_type, max_iteration, cuda):
     loss = float(loss)
     
     accuracy = calculate_accuracy(targets, predictions, classes_num, average='macro')
-    auc=calculate_auc(targets, predictions, classes_num)
+    auc=calculate_auc(targets, scores, classes_num)
     return accuracy, loss,auc
 
 def forward(model, generate_func, cuda):
@@ -267,11 +267,12 @@ def inference_validation_data(args):
     targets = dict['target']    # (audios_num, classes_num)
 
     predictions = np.argmax(outputs, axis=-1)
+    scores=outputs[:,-1]
     classes_num = outputs.shape[-1]
-
+    
     # Evaluate
     confusion_matrix = calculate_confusion_matrix(targets, predictions, classes_num)
-    auc=calculate_auc(targets, predictions, classes_num)
+    auc=calculate_auc(targets, scores, classes_num)
     class_wise_accuracy = calculate_accuracy(targets, predictions, classes_num)
     se, sp, as_score, hs_score = calculate_accuracy(targets, predictions, classes_num, average='binary')
 
