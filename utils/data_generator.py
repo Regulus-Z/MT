@@ -9,7 +9,7 @@ from utilities import read_audio
 import config
 
 class DataGenerator(object):
-    def __init__(self, dataset_dir, batch_size, dev_train_csv=None, dev_validate_csv=None, seed=1234):
+    def __init__(self, dataset_dir, batch_size, dev_train_csv=None, dev_validate_csv=None, seed=1234,SpecAugment=None):
         """
         Inputs:
           batch_size: int
@@ -30,7 +30,10 @@ class DataGenerator(object):
         # read data
         self.train_audio_names, train_cycle_labels = self.get_audio_info_from_csv(dev_train_csv)
         self.validate_audio_names, validate_cycle_labels = self.get_audio_info_from_csv(dev_validate_csv)
-
+        
+        #read positive data for SpecAugment
+        self.pos_sample_names,pos_sample_labels=self.get_audio_info_from_csv(SpecAugment)
+            
         self.train_y = np.array([lb_to_ix[train_cycle_labels[lb]] for lb in range(0, len(train_cycle_labels))])
         self.validate_y = np.array([lb_to_ix[validate_cycle_labels[lb]] for lb in range(0, len(validate_cycle_labels))])
                 
@@ -64,7 +67,7 @@ class DataGenerator(object):
         return audio_names, cycle_labels
 
     def read_batch_audio(self, batch_audio_indexes, data_type, generate_type):
-        
+         
         batch_audio = []
         ##### add cough audio
         batch_audio_ch = []
@@ -73,7 +76,10 @@ class DataGenerator(object):
             audio_names_list = self.train_audio_names
         elif data_type == 'evaluate':
             audio_names_list = self.validate_audio_names
-
+        #SpecAug Function
+        elif data_type == 'SpecAug':
+            audio_names_list = self.pos_sample_names
+        
         for ind in range(0, len(batch_audio_indexes)):
             audio_name = audio_names_list[batch_audio_indexes[ind]]
             batch_audio_name.append(audio_name)
@@ -86,6 +92,8 @@ class DataGenerator(object):
                     start_ind = random.randint(0, len(audio) - self.cycle_len)
                 elif generate_type == 'ge_validate':
                     start_ind = int((len(audio) - self.cycle_len)/2)
+                elif generate_type== 'ge_specaug':
+                    start_ind = random.randint(0, len(audio) - self.cycle_len)
                 else:
                     print('Wrong data generation type')
                 audio_pad = audio[start_ind:start_ind + self.cycle_len]
@@ -102,6 +110,8 @@ class DataGenerator(object):
                     start_ind_ch = random.randint(0, len(audio_ch) - self.cycle_len_ch)
                 elif generate_type == 'ge_validate':
                     start_ind_ch = int((len(audio_ch) - self.cycle_len_ch)/2)
+                elif generate_type == 'ge_specaug':
+                    start_ind_ch = random.randint(0, len(audio_ch) - self.cycle_len_ch)
                 else:
                     print('Wrong data generation type')
                 audio_pad_ch = audio_ch[start_ind_ch:start_ind_ch + self.cycle_len_ch]
@@ -113,37 +123,38 @@ class DataGenerator(object):
                 print('Wrong audio length!')
             batch_audio_ch.append(audio_pad_ch)
             batch_audio.append(audio_pad)
-
+    
         return batch_audio,batch_audio_ch,batch_audio_name
 
     def generate_train(self):
         """Generate mini-batch data for training.
         Returns:
           batch_x: (batch_size, seq_len, freq_bins)
+          batch_ch: (batch_size, seq_len, freq_bins)
           batch_y: (batch_size,)
         """
 
         batch_size = self.batch_size
         audio_indexes = np.arange(len(self.train_audio_names))
         audios_num = len(audio_indexes)
-
+        
         self.random_state.shuffle(audio_indexes)
 
         iteration = 0
         pointer = 0
-
+        
         while True:
             # Reset pointer
             if pointer >= audios_num:
                 pointer = 0
                 self.random_state.shuffle(audio_indexes)
-
+            
             # Get batch indexes
             batch_audio_indexes = audio_indexes[pointer: pointer + batch_size]
             pointer += batch_size
-
+            
             iteration += 1
-
+        
             batch_x,batch_ch,batch_audio_names = self.read_batch_audio(batch_audio_indexes, 'train', 'ge_train')
             batch_x = np.array(batch_x)
             batch_ch = np.array(batch_ch)
