@@ -113,7 +113,10 @@ class DecisionLevelMaxPooling(nn.Module):
         self.logmel_extractor = tl.LogmelFilterBank(sr=sample_rate, n_fft=window_size,
             n_mels=mel_bins, fmin=20, fmax=8000, ref=ref, amin=amin, top_db=top_db,
             freeze_parameters=True)
-
+        ###SpecAugument
+        self.spec_augmenter = SpecAugmentation(time_drop_width=64, time_stripes_num=2, 
+            freq_drop_width=8, freq_stripes_num=2)
+        
         self.cnn_encoder = CNN_encoder()
         ###Encoder for cough-heavy
         self.cnn_encoder_ch = CNN_encoder()
@@ -170,130 +173,6 @@ class DecisionLevelMaxPooling(nn.Module):
         
 
 
-
-class ProtoNet(nn.Module):
-    def __init__(self, classes_num, n_proto, proto_form):  # proto_type: 'vector1d', 'vector2d', 'vector2d_att'
-        super(ProtoNet, self).__init__()
-        sample_rate=config.sample_rate
-        window_size = config.win_length
-        hop_size = config.hop_length
-        mel_bins = config.mel_bins
-        window = 'hann'
-        center = True
-        pad_mode = 'reflect'
-        ref = 1.0
-        amin = 1e-10
-        top_db = None
-        self.classes_num = classes_num
-        self.spectrogram_extractor = tl.Spectrogram(n_fft=window_size, hop_length=hop_size,
-            win_length=window_size, window=window, center=center, pad_mode=pad_mode,
-            freeze_parameters=True)
-
-        self.logmel_extractor = tl.LogmelFilterBank(sr=sample_rate, n_fft=window_size,
-            n_mels=mel_bins, fmin=20, fmax=8000, ref=ref, amin=amin, top_db=top_db,
-            freeze_parameters=True)
-
-        self.cnn_encoder = CNN_encoder()
-        self.prototypelayer = PrototypeLayer(n_proto=n_proto, distance='cosine', proto_form=proto_form)
-
-        self.fc_final = nn.Linear(n_proto, classes_num, bias=False)
-
-        self.init_weights()
-
-    def init_weights(self):
-        init_layer(self.fc_final)
-
-    def forward(self, input):
-        """input: (samples_num, date_length)
-        """
-        x = self.spectrogram_extractor(input)   # (batch_size, 1, time_steps, freq_bins)
-        x = self.logmel_extractor(x)    # (batch_size, 1, time_steps, mel_bins)
-        batch_size, channel_num, _, mel_bins = x.shape
-        x_diff1 = torch.diff(x, n=1, dim=2, append=x[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
-        x_diff2 = torch.diff(x_diff1, n=1, dim=2, append=x_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
-        x = torch.cat((x, x_diff1, x_diff2), dim=1)
-
-        if False:
-            x_array = x.data.cpu().numpy()[0]
-            x_array = np.squeeze(x_array)
-            plt.matshow(x_array.T, origin='lower', aspect='auto', cmap='jet')
-            plt.savefig('test.png')
-
-        x_emb = self.cnn_encoder(x)
-        x_emb = F.dropout(x_emb, p=0.5, training=self.training)
-        similarity, prototype = self.prototypelayer(x_emb)  # for cosine
-        distance = torch.exp(-similarity)
-
-        # (samples_num, 512, hidden_units)
-        output = F.log_softmax(self.fc_final(similarity), dim=-1)
-
-        if self.training:
-            loss_diverse = self.diverse_loss(prototype)
-            return output, x, distance, similarity, loss_diverse
-        else:
-            return output
-
-    def diverse_loss(self, a):
-        # Compute the "diversity" loss to penalize prototypes close to each other
-        if len(a.shape) == 2:
-            pt_flat = a
-        elif len(a.shape) > 2:
-            pt_flat = torch.flatten(a, start_dim=1, end_dim=-1)
-        '''
-        loss_sim = 0
-        for i in range(0, a.shape[0]):
-            for j in range(0, a.shape[0]):
-                if i != j:
-                    loss_sim = loss_sim + F.cosine_similarity(torch.unsqueeze(pt_flat[i], dim=0), torch.unsqueeze(pt_flat[j], dim=0))
-        loss_sim = loss_sim/(pt_flat.shape[0]*pt_flat.shape[0]-pt_flat.shape[0])  # 12
-        '''
-        '''
-        proto_per_class = int(a.shape[0] / self.classes_num)
-        loss_sim_internal = 0
-        n_sim_internal = 0
-        loss_sim_external = 0
-        n_sim_external = 0
-        for i in range(0, a.shape[0]):
-            for j in range(0, a.shape[0]):
-                i_class = int(i/proto_per_class)
-                if i != j:
-                    if j >= i_class * proto_per_class and j < (i_class+1) * proto_per_class:
-                        loss_sim_internal = loss_sim_internal + F.cosine_similarity(torch.unsqueeze(pt_flat[i], dim=0), torch.unsqueeze(pt_flat[j], dim=0))
-                        n_sim_internal = n_sim_internal + 1
-                    else:
-                        loss_sim_external = loss_sim_external + F.cosine_similarity(torch.unsqueeze(pt_flat[i], dim=0), torch.unsqueeze(pt_flat[j], dim=0))
-                        n_sim_external = n_sim_external + 1
-        loss_sim_internal = loss_sim_internal/n_sim_internal
-        loss_sim_external = loss_sim_external/n_sim_external
-        if loss_sim_internal == 0:
-            loss_sim = loss_sim_external
-        else:
-            loss_sim = loss_sim_external/loss_sim_internal
-        '''
-
-        proto_per_class = int(pt_flat.shape[0] / self.classes_num)
-        loss_sim_internal = 0
-        a1 = torch.unsqueeze(pt_flat, dim=1)
-        a2 = torch.unsqueeze(pt_flat, dim=0)
-        sim_lowbound = move_data_to_gpu((1E-8) * torch.ones((a1.shape[0], a1.shape[0]), dtype=torch.float), True)
-        similarity = torch.sum(a1 * a2, dim=2) / torch.maximum(torch.norm(a1, p=2, dim=2)*torch.norm(a2, p=2, dim=2), sim_lowbound)
-        for i in range(0, self.classes_num):
-            loss_sim_internal = loss_sim_internal + torch.sum(similarity[i * proto_per_class:(i+1) * proto_per_class, i * proto_per_class:(i+1) * proto_per_class], dim=(0, 1))
-        loss_sim_external = torch.sum(similarity, dim=(0, 1)) - loss_sim_internal
-        diag_sum = torch.sum(similarity * move_data_to_gpu(torch.eye(pt_flat.shape[0]), True), dim=(0, 1))
-        loss_sim_internal = loss_sim_internal - diag_sum
-        # mean
-        loss_sim_internal = loss_sim_internal / (self.classes_num*(proto_per_class*proto_per_class-proto_per_class))
-        loss_sim_external = loss_sim_external / (pt_flat.shape[0]*pt_flat.shape[0] - self.classes_num*proto_per_class*proto_per_class)
-
-        if proto_per_class == 1:
-            loss_sim = loss_sim_external
-        else:
-            loss_sim = loss_sim_external/loss_sim_internal
-
-        return loss_sim
-
-
 class CNN_encoder(nn.Module):
     def __init__(self):
         super(CNN_encoder, self).__init__()
@@ -316,7 +195,7 @@ class CNN_encoder(nn.Module):
         x = x.transpose(1, 3)
 
         # (samples_num, channel, time_steps, freq_bins)
-        x = self.conv1(x, pool_size=(2, 2), pool_type='max')
+        x = self.conv1(x, pool_size=(2, 2), pool_type='avg')
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv2(x, pool_size=(2, 2), pool_type='max')
         x = F.dropout(x, p=0.2, training=self.training)
