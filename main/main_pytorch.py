@@ -92,7 +92,7 @@ def forward(model, generate_func, cuda):
         # Append data
         outputs.append(batch_output.data.cpu().numpy())
         audio_names.append(batch_audio_names)
-        targets.append(batch_y)
+        targets.append(batch_y.cpu())
 
     dict = {}
 
