@@ -20,7 +20,7 @@ import config
 
 
 Model = DecisionLevelMaxPooling
-batch_size = 16
+batch_size = 8
 
 
 def evaluate(model, generator, data_type, max_iteration, cuda):
@@ -84,9 +84,10 @@ def forward(model, generate_func, cuda):
 
         batch_x = move_data_to_gpu(batch_x, cuda)
         batch_ch = move_data_to_gpu(batch_ch, cuda)
+        batch_y= move_data_to_gpu(batch_y, cuda)
         # Predict
         model.eval()
-        batch_output = model(batch_x,batch_ch)
+        batch_output = model(batch_x,batch_ch，batch_y)
 
         # Append data
         outputs.append(batch_output.data.cpu().numpy())
@@ -146,7 +147,7 @@ def train(args):
     # Optimizer
     lr = 1e-3
     optimizer = optim.Adam(model.parameters(), lr=lr, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=200, gamma=0.9)
+    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=200, gamma=0.95)
     train_bgn_time = time.time()
 
     # Train on mini batches
@@ -198,7 +199,7 @@ def train(args):
         batch_ch = move_data_to_gpu(batch_ch, cuda)
         # Train
         model.train()
-        batch_output = model(batch_x,batch_ch)
+        batch_output = model(batch_x,batch_ch,batch_y)
 
         loss = F.nll_loss(batch_output, batch_y, weight=class_weight)
 
