@@ -128,12 +128,36 @@ class DecisionLevelMaxPooling(nn.Module):
     def init_weights(self):
         init_layer(self.fc_final)
 
-    def forward(self, input1,input2):
-        """input: (samples_num, date_length)
+    def forward(self, input1,input2,input3):
+        """input1,2: (samples_num, date_length) input3:(samples_num,class)
         """
         x1 = self.spectrogram_extractor(input1)   # (batch_size, 1, time_steps, freq_bins)
         x1 = self.logmel_extractor(x1)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x1.shape
+        #find pos samples for SpecAugument
+        if self.training:
+            x_neg_ind=torch.nonzero(input3)
+            x_pos_ind=torch.nonzero(input3==0)
+            if len(x_neg_ind) is 0:
+                x1=self.spec_augmenter(x1)
+            elif len(x_pos_ind) is 0:
+                pass
+            else:
+                neg=torch.eq(input3,1)
+                neg=torch.reshape(-1,1)
+                pos=torch.eq(input3,0)
+                pos=torch.reshape(-1,1)
+                x_neg=x1*neg
+                x_pos=x1*pos
+                x_pos=self.spec_augmenter(x_pos)
+                x1=x_neg+x_pos
+            """
+            x_neg_ind=torch.reshape(x_neg_ind, (-1,))
+            x_pos_ind=torch.reshape(x_pos_ind, (-1,))
+            x_neg=torch.index_select(x1, 0, x_neg_ind)
+            x_pos=torch.index_select(x1, 0, x_pos_ind)
+            """
+            
         x1_diff1 = torch.diff(x1, n=1, dim=2, append=x1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1_diff2 = torch.diff(x1_diff1, n=1, dim=2, append=x1_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1 = torch.cat((x1, x1_diff1, x1_diff2), dim=1)
@@ -149,6 +173,23 @@ class DecisionLevelMaxPooling(nn.Module):
         x2 = self.spectrogram_extractor(input2)   # (batch_size, 1, time_steps, freq_bins)
         x2 = self.logmel_extractor(x2)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x2.shape
+        
+        if self.training:
+            x_neg_ind=torch.nonzero(input3)
+            x_pos_ind=torch.nonzero(input3==0)
+            if len(x_neg_ind) is 0:
+                x2=self.spec_augmenter(x2)
+            elif len(x_pos_ind) is 0:
+                pass
+            else:
+                neg=torch.eq(input3,1)
+                neg=torch.reshape(-1,1)
+                pos=torch.eq(input3,0)
+                pos=torch.reshape(-1,1)
+                x_neg=x2*neg
+                x_pos=x2*pos
+                x_pos=self.spec_augmenter(x_pos)
+                x2=x_neg+x_pos
         x2_diff1 = torch.diff(x2, n=1, dim=2, append=x2[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2_diff2 = torch.diff(x2_diff1, n=1, dim=2, append=x2_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1)
