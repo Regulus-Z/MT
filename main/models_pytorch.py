@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+from torchlibrosa.augmentation import SpecAugmentation
 import torchlibrosa as tl
 import numpy as np
 import matplotlib.pyplot as plt
