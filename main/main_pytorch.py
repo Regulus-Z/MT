@@ -87,7 +87,7 @@ def forward(model, generate_func, cuda):
         batch_y= move_data_to_gpu(batch_y, cuda)
         # Predict
         model.eval()
-        batch_output = model(batch_x,batch_ch，batch_y)
+        batch_output = model(batch_x,batch_ch,batch_y)
 
         # Append data
         outputs.append(batch_output.data.cpu().numpy())
