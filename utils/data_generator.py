@@ -32,7 +32,7 @@ class DataGenerator(object):
         self.validate_audio_names, validate_cycle_labels = self.get_audio_info_from_csv(dev_validate_csv)
         
         #read positive data for SpecAugment
-        self.pos_sample_names,pos_sample_labels=self.get_audio_info_from_csv(SpecAugment)
+        #self.pos_sample_names,pos_sample_labels=self.get_audio_info_from_csv(SpecAugment)
             
         self.train_y = np.array([lb_to_ix[train_cycle_labels[lb]] for lb in range(0, len(train_cycle_labels))])
         self.validate_y = np.array([lb_to_ix[validate_cycle_labels[lb]] for lb in range(0, len(validate_cycle_labels))])
