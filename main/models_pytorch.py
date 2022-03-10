@@ -144,34 +144,20 @@ class DecisionLevelMaxPooling(nn.Module):
             elif len(x_pos_ind) is 0:
                 pass
             else:
-                """
-                neg=torch.eq(input3,1)
-                neg=torch.reshape(-1,1)
-                pos=torch.eq(input3,0)
-                pos=torch.reshape(-1,1)
-                x_neg=x1*neg
-                x_pos=x1*pos
-                x_pos=self.spec_augmenter(x_pos)
-                x1=x_neg+x_pos
-                """
-                x_neg=torch.index_select(x1, 0, x_neg_ind)
-                x_pos=torch.index_select(x1, 0, x_pos_ind)
+                neg=torch.reshape(x_neg_ind(-1,))
+                pos=torch.reshape(x_pos_ind(-1,))
+                x_neg=torch.index_select(x1, 0, neg)
+                x_pos=torch.index_select(x1, 0, pos)
                 x_pos=self.spec_augmenter(x_pos)
                 j=0
                 k=0
                 for i in range(0,batch_size):
-                    if x_pos_ind[i]==0:
+                    if input3[i]==0:
                         x1[i,:,:,:]=x_pos[j,:,:,:]
                         j=j+1
                     else:
                         x1[i,:,:,:]=x_neg[k,:,:,:]
                         k=k+1
-            """
-            x_neg_ind=torch.reshape(x_neg_ind, (-1,))
-            x_pos_ind=torch.reshape(x_pos_ind, (-1,))
-            x_neg=torch.index_select(x1, 0, x_neg_ind)
-            x_pos=torch.index_select(x1, 0, x_pos_ind)
-            """
             
         x1_diff1 = torch.diff(x1, n=1, dim=2, append=x1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1_diff2 = torch.diff(x1_diff1, n=1, dim=2, append=x1_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
@@ -195,23 +181,15 @@ class DecisionLevelMaxPooling(nn.Module):
             elif len(x_pos_ind) is 0:
                 pass
             else:
-                """
-                neg=torch.eq(input3,1)
-                neg=torch.reshape(-1,1)
-                pos=torch.eq(input3,0)
-                pos=torch.reshape(-1,1)
-                x_neg=x1*neg
-                x_pos=x1*pos
-                x_pos=self.spec_augmenter(x_pos)
-                x1=x_neg+x_pos
-                """
-                x_neg=torch.index_select(x2, 0, x_neg_ind)
-                x_pos=torch.index_select(x2, 0, x_pos_ind)
+                neg=torch.reshape(x_neg_ind(-1,))
+                pos=torch.reshape(x_pos_ind(-1,))
+                x_neg=torch.index_select(x2, 0, neg)
+                x_pos=torch.index_select(x2, 0, pos)
                 x_pos=self.spec_augmenter(x_pos)
                 j=0
                 k=0
                 for i in range(0,batch_size):
-                    if x_pos_ind[i]==0:
+                    if input3[i]==0:
                         x2[i,:,:,:]=x_pos[j,:,:,:]
                         j=j+1
                     else:
