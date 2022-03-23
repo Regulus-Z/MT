@@ -14,7 +14,7 @@ from torch.autograd import Variable
 from data_generator import DataGenerator
 from utilities import (create_folder, get_filename, create_logging,
                        calculate_confusion_matrix, calculate_accuracy, 
-                       print_confusion_matrix, print_accuracy, print_accuracy_binary,calculate_auc,print_auc)
+                       print_confusion_matrix, print_accuracy, print_accuracy_binary,auc_2,calculate_auc,print_auc)
 from models_pytorch import move_data_to_gpu, DecisionLevelMaxPooling
 import config
 
@@ -54,8 +54,8 @@ def evaluate(model, generator, data_type, max_iteration, cuda):
     scores=outputs[:,-1]
     # Evaluate
     classes_num = outputs.shape[-1]
-
-    loss = F.nll_loss(Variable(torch.Tensor(outputs)), Variable(torch.LongTensor(targets))).data.numpy()
+    output_log=lnp.log(outputs)
+    loss = F.nll_loss(Variable(torch.Tensor(output_log)), Variable(torch.LongTensor(targets))).data.numpy()
     loss = float(loss)
     
     accuracy = calculate_accuracy(targets, predictions, classes_num, average='macro')
@@ -200,8 +200,8 @@ def train(args):
         # Train
         model.train()
         batch_output = model(batch_x,batch_ch,batch_y)
-
-        loss = F.nll_loss(batch_output, batch_y, weight=class_weight)
+        log_output=torch.log(batch_output)
+        loss = F.nll_loss(log_output, batch_y, weight=class_weight)
 
         # Backward
         optimizer.zero_grad()
@@ -283,7 +283,7 @@ def inference_validation_data(args):
     print_confusion_matrix(confusion_matrix, labels)
     #print('confusion_matrix: \n', confusion_matrix)
     print_accuracy_binary(se, sp, as_score, hs_score, labels)
-
+    
 
 
 if __name__ == '__main__':
