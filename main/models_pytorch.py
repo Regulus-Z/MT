@@ -92,7 +92,123 @@ class ConvBlock(nn.Module):
             raise Exception('Incorrect argument!')
 
         return x
+#####
+class AttBlock(nn.Module):
+    def __init__(self, n_in, n_out, activation='linear', temperature=1.):
+        super(AttBlock, self).__init__()
+        
+        self.activation = activation
+        self.temperature = temperature
+        self.att = nn.Conv1d(in_channels=n_in, out_channels=n_out, kernel_size=1, stride=1, padding=0, bias=True)
+        self.cla = nn.Conv1d(in_channels=n_in, out_channels=n_out, kernel_size=1, stride=1, padding=0, bias=True)
+        
+        self.bn_att = nn.BatchNorm1d(n_out)
+        self.init_weights()
+        
+    def init_weights(self):
+        init_layer(self.att)
+        init_layer(self.cla)
+        init_bn(self.bn_att)
+        
+    def forward(self, x):
+        # x: (n_samples, n_in, n_time)
+        tmp = self.att(x)
+        tmp = torch.clamp(tmp, -10, 10)
+        att = torch.exp(tmp / self.temperature) + 1e-6
+        norm_att = att / torch.sum(att, dim=2)[:, :, None]
+        cla = self.nonlinear_transform(self.cla(x))
+        x = torch.sum(norm_att * cla, dim=2)
+        return x, norm_att, cla
 
+    def nonlinear_transform(self, x):
+        if self.activation == 'linear':
+            return x
+        elif self.activation == 'sigmoid':
+            return torch.sigmoid(x)
+####################################
+# The following Transformer modules are modified from Yu-Hsiang Huang's code:
+# https://github.com/jadore801120/attention-is-all-you-need-pytorch
+class ScaledDotProductAttention(nn.Module):
+    """Scaled Dot-Product Attention"""
+
+    def __init__(self, temperature, attn_dropout=0.1):
+        super().__init__()
+        self.temperature = temperature
+        self.dropout = nn.Dropout(attn_dropout)
+        self.softmax = nn.Softmax(dim=2)
+
+    def forward(self, q, k, v, mask=None):
+
+        attn = torch.bmm(q, k.transpose(1, 2))
+        attn = attn / self.temperature
+
+        if mask is not None:
+            attn = attn.masked_fill(mask, -np.inf)
+
+        attn = self.softmax(attn)
+        attn = self.dropout(attn)
+        output = torch.bmm(attn, v)
+
+        return output, attn
+
+
+class MultiHead(nn.Module):
+    """Multi-Head Attention module."""
+
+    def __init__(self, n_head, d_model, d_k, d_v, dropout=0.1):
+        super().__init__()
+
+        self.n_head = n_head
+        self.d_k = d_k
+        self.d_v = d_v
+
+        self.w_qs = nn.Linear(d_model, n_head * d_k)
+        self.w_ks = nn.Linear(d_model, n_head * d_k)
+        self.w_vs = nn.Linear(d_model, n_head * d_v)
+        nn.init.normal_(self.w_qs.weight, mean=0, std=np.sqrt(2.0 / (d_model + d_k)))
+        nn.init.normal_(self.w_ks.weight, mean=0, std=np.sqrt(2.0 / (d_model + d_k)))
+        nn.init.normal_(self.w_vs.weight, mean=0, std=np.sqrt(2.0 / (d_model + d_v)))
+        self.w_qs.bias.data.fill_(0)
+        self.w_ks.bias.data.fill_(0)
+        self.w_vs.bias.data.fill_(0)
+
+        self.attention = ScaledDotProductAttention(temperature=np.power(d_k, 0.5))
+        self.layer_norm = nn.LayerNorm(d_model)
+
+        self.fc = nn.Linear(n_head * d_v, d_model)
+        nn.init.xavier_normal_(self.fc.weight)
+        self.fc.bias.data.fill_(0)
+
+        self.dropout = nn.Dropout(dropout)
+
+
+    def forward(self, q, k, v, mask=None):
+
+        d_k, d_v, n_head = self.d_k, self.d_v, self.n_head
+
+        sz_b, len_q, _ = q.size()   # (batch_size, 80, 512)
+        sz_b, len_k, _ = k.size()
+        sz_b, len_v, _ = v.size()
+
+        residual = q
+
+        q = self.w_qs(q).view(sz_b, len_q, n_head, d_k) # (batch_size, T, 8, 64)
+        k = self.w_ks(k).view(sz_b, len_k, n_head, d_k)
+        v = self.w_vs(v).view(sz_b, len_v, n_head, d_v)
+
+        q = q.permute(2, 0, 1, 3).contiguous().view(-1, len_q, d_k) # (n*b) x lq x dk, (batch_size*8, T, 64)
+        k = k.permute(2, 0, 1, 3).contiguous().view(-1, len_k, d_k) # (n*b) x lk x dk
+        v = v.permute(2, 0, 1, 3).contiguous().view(-1, len_v, d_v) # (n*b) x lv x dv
+
+        # mask = mask.repeat(n_head, 1, 1) # (n*b) x .. x ..
+        output, attn = self.attention(q, k, v, mask=mask)   # (n_head * batch_size, T, 64), (n_head * batch_size, T, T)
+        
+        output = output.view(n_head, sz_b, len_q, d_v)  # (n_head, batch_size, T, 64)
+        output = output.permute(1, 2, 0, 3).contiguous().view(sz_b, len_q, -1) # b x lq x (n*dv), (batch_size, T, 512)
+        output = F.relu_(self.dropout(self.fc(output)))
+        return output
+        
+#####
 class DecisionLevelMaxPooling(nn.Module):
     def __init__(self, classes_num):
         super(DecisionLevelMaxPooling, self).__init__()
@@ -122,11 +238,21 @@ class DecisionLevelMaxPooling(nn.Module):
         ###Encoder for cough-heavy
         self.cnn_encoder_ch = CNN_encoder()
         
+        n_head = 8
+        n_hid = 512
+        d_k = 64
+        d_v = 64
+        dropout = 0.2
+        self.multihead = MultiHead(n_head, n_hid, d_k, d_v, dropout)
+        
+        self.fc_1 = nn.Linear(512, classes_num)#original:512 double?
+        self.fc_2 = nn.Linear(512, classes_num)#original:512 double?
         self.fc_final = nn.Linear(1024, classes_num)#original:512 double?
-
         self.init_weights()
 
     def init_weights(self):
+        init_layer(self.fc_1)
+        init_layer(self.fc_2)
         init_layer(self.fc_final)
 
     def forward(self, input1,input2,input3):
@@ -170,6 +296,7 @@ class DecisionLevelMaxPooling(nn.Module):
             plt.savefig('test.png')
 
         x1 = self.cnn_encoder(x1)
+
         ######add x2
         x2 = self.spectrogram_extractor(input2)   # (batch_size, 1, time_steps, freq_bins)
         x2 = self.logmel_extractor(x2)    # (batch_size, 1, time_steps, mel_bins)
@@ -208,12 +335,22 @@ class DecisionLevelMaxPooling(nn.Module):
         x2 = self.cnn_encoder(x2)
         # (samples_num, 512, hidden_units)
         ##################### where concatenate?
+        x1 = torch.mean(x1, dim=3)
+        x1 = x1.transpose(1, 2)   # (batch_size, time_steps, channels)
+        x1 = self.multihead(x1, x1, x1)
+        x2 = torch.mean(x2, dim=3)
+        x2 = x2.transpose(1, 2)   # (batch_size, time_steps, channels)
+        x2 = self.multihead(x2, x2, x2)
+        '''
         output1 = F.max_pool2d(x1, kernel_size=x1.shape[2:])
         output1 = output1.view(output1.shape[0:2])
         output2 = F.max_pool2d(x2, kernel_size=x2.shape[2:])
         output2 = output2.view(output2.shape[0:2])
-        combined=torch.cat((output1,output2),1)
-        output = F.log_softmax(self.fc_final(combined), dim=-1)
+        '''
+        x1=self.fc_1(x1)
+        x2=self.fc_2(x2)
+        combined=torch.cat((x1,x2),1)
+        output = F.softmax(self.fc_final(combined), dim=-1)
 
         return output
         
