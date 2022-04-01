@@ -7,7 +7,7 @@ import logging
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from sklearn.metrics import roc_auc_score
-
+from sklearn.metrics import auc
 import config
 
 
@@ -141,7 +141,48 @@ def calculate_auc(target, predict, classes_num):
         return roc_auc_score(Y_test,Y_pred)
     else:
         raise Exception('Incorrect average!')
+def auc_2(reference_labels,sys_scores):
+    thresholds=np.arange(0,1,0.01)
+    categories = ['n','p']
+    TP = np.zeros((len(reference_labels),len(thresholds)))
+    TN = np.zeros((len(reference_labels),len(thresholds)))
+    keyCnt=-1
+    for key in range(len(sys_scores)): # Repeat for each recording
+        keyCnt+=1
+        sys_labels = (sys_scores[key]>=thresholds)*1	# System label for a range of thresholds as binary 0/1
+        gt = reference_labels[key]
+        
+        ind = np.where(sys_labels == gt) # system label matches the ground truth
+        if gt==1:	# ground-truth label=1: True positives 
+            TP[keyCnt,ind]=1
+        else:		# ground-truth label=0: True negatives
+            TN[keyCnt,ind]=1
+            
+    total_positives = sum(reference_labels)	# Total number of positive samples
+    total_negatives = len(reference_labels)-total_positives # Total number of negative samples
+    
+    TP = np.sum(TP,axis=0)	# Sum across the recordings
+    TN = np.sum(TN,axis=0)
+    
+    TPR = TP/total_positives	# True positive rate: #true_positives/#total_positives
+    TNR = TN/total_negatives	# True negative rate: #true_negatives/#total_negatives
+	
+    AUC = auc( 1-TNR, TPR )    	# AUC 
 
+    ind = np.where(TPR>=0.8)[0]
+    sensitivity = TPR[ind[-1]]
+    specificity = TNR[ind[-1]]
+	    
+	# pack the performance metrics in a dictionary to save & return
+	# Each performance metric (except AUC) is a array for different threshold values
+	# Specificity at 90% sensitivity
+    scores={'TPR':TPR,
+            'FPR':1-TNR,
+            'AUC':AUC,
+            'sensitivity':sensitivity,
+            'specificity':specificity,
+			'thresholds':thresholds}
+    return scores
 
 def calculate_confusion_matrix(target, predict, classes_num):
     """Calculate confusion matrix.
