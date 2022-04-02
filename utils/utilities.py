@@ -142,7 +142,7 @@ def calculate_auc(target, predict, classes_num):
     else:
         raise Exception('Incorrect average!')
 def auc_2(reference_labels,sys_scores):
-    thresholds=np.arange(0,1,0.01)
+    thresholds=np.arange(0,1,0.001)
     categories = ['n','p']
     TP = np.zeros((len(reference_labels),len(thresholds)))
     TN = np.zeros((len(reference_labels),len(thresholds)))
