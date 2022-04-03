@@ -80,14 +80,15 @@ def forward(model, generate_func, cuda):
     
     # Evaluate on mini-batch
     for data in generate_func:
-        (batch_x,batch_ch, batch_y, batch_audio_names) = data
+        (batch_x,batch_ch, batch_3,batch_y, batch_audio_names) = data
 
         batch_x = move_data_to_gpu(batch_x, cuda)
         batch_ch = move_data_to_gpu(batch_ch, cuda)
+        batch_3 = move_data_to_gpu(batch_3, cuda)
         batch_y= move_data_to_gpu(batch_y, cuda)
         # Predict
         model.eval()
-        batch_output = model(batch_x,batch_ch,batch_y)
+        batch_output = model(batch_x,batch_ch,batch_3,batch_y)
 
         # Append data
         outputs.append(batch_output.data.cpu().numpy())
@@ -147,11 +148,11 @@ def train(args):
     # Optimizer
     lr = 1e-3
     optimizer = optim.Adam(model.parameters(), lr=lr, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.)
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=200, gamma=0.95)
+    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=200, gamma=0.98)
     train_bgn_time = time.time()
 
     # Train on mini batches
-    for (iteration, (batch_x,batch_ch,batch_y, _)) in enumerate(generator.generate_train()):
+    for (iteration, (batch_x,batch_ch,batch_3,batch_y, _)) in enumerate(generator.generate_train()):
         # Evaluate
         if iteration % 100 == 0:
             train_fin_time = time.time()
@@ -197,9 +198,10 @@ def train(args):
         batch_x = move_data_to_gpu(batch_x, cuda)
         batch_y = move_data_to_gpu(batch_y, cuda)
         batch_ch = move_data_to_gpu(batch_ch, cuda)
+        batch_3 = move_data_to_gpu(batch_3, cuda)
         # Train
         model.train()
-        batch_output = model(batch_x,batch_ch,batch_y)
+        batch_output = model(batch_x,batch_ch,,batch_3,batch_y)
         log_output=torch.log(batch_output)
         loss = F.nll_loss(log_output, batch_y, weight=class_weight)
 
