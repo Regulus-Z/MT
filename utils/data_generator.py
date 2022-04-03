@@ -70,22 +70,22 @@ class DataGenerator(object):
          
         batch_audio = []
         ##### add cough audio
-        batch_audio_ch = []
+        batch_audio_2 = []
+        batch_audio_3 = []
         batch_audio_name = []
         if data_type == 'train':
             audio_names_list = self.train_audio_names
         elif data_type == 'evaluate':
             audio_names_list = self.validate_audio_names
-        #SpecAug Function
-        elif data_type == 'SpecAug':
-            audio_names_list = self.pos_sample_names
+
         
         for ind in range(0, len(batch_audio_indexes)):
             audio_name = audio_names_list[batch_audio_indexes[ind]]
             batch_audio_name.append(audio_name)
             #########################
             audio, fs = read_audio(os.path.join(self.dataset_dir,'deep-breath', 'audio', audio_name))
-            audio_ch,fs_ch=read_audio(os.path.join(self.dataset_dir,'cough-heavy', 'audio', audio_name))
+            audio_2,fs_2=read_audio(os.path.join(self.dataset_dir,'cough-heavy', 'audio', audio_name))
+            audio_3,fs_3=read_audio(os.path.join(self.dataset_dir,'vowel-a', 'audio', audio_name))
             #########################
             if len(audio) > self.cycle_len:
                 if generate_type == 'ge_train':
@@ -105,32 +105,48 @@ class DataGenerator(object):
                 print('Wrong audio length!')
 
             ######
-            if len(audio_ch) > self.cycle_len_ch:
+            if len(audio_2) > self.cycle_len_ch:
                 if generate_type == 'ge_train':
-                    start_ind_ch = random.randint(0, len(audio_ch) - self.cycle_len_ch)
+                    start_ind_2 = random.randint(0, len(audio_2) - self.cycle_len_ch)
                 elif generate_type == 'ge_validate':
-                    start_ind_ch = int((len(audio_ch) - self.cycle_len_ch)/2)
-                elif generate_type == 'ge_specaug':
-                    start_ind_ch = random.randint(0, len(audio_ch) - self.cycle_len_ch)
+                    start_ind_2 = int((len(audio_2) - self.cycle_len_ch)/2)
                 else:
                     print('Wrong data generation type')
-                audio_pad_ch = audio_ch[start_ind_ch:start_ind_ch + self.cycle_len_ch]
-            elif len(audio_ch) < self.cycle_len_ch:
-                audio_pad_ch = np.pad(audio_ch, (0, self.cycle_len_ch-len(audio_ch)), mode='wrap')
-            elif len(audio_ch) == self.cycle_len_ch:
-                audio_pad_ch = audio_ch
+                audio_pad_2 = audio_2[start_ind_2:start_ind_2 + self.cycle_len_ch]
+            elif len(audio_2) < self.cycle_len_ch:
+                audio_pad_2 = np.pad(audio_2, (0, self.cycle_len_ch-len(audio_2)), mode='wrap')
+            elif len(audio_2) == self.cycle_len_ch:
+                audio_pad_2 = audio_2
             else:
                 print('Wrong audio length!')
-            batch_audio_ch.append(audio_pad_ch)
+            ######
+            if len(audio_3) > self.cycle_len_va:
+                if generate_type == 'ge_train':
+                    start_ind_3 = random.randint(0, len(audio_3) - self.cycle_len_va)
+                elif generate_type == 'ge_validate':
+                    start_ind_3 = int((len(audio_3) - self.cycle_len_va)/2)
+                else:
+                    print('Wrong data generation type')
+                audio_pad_3 = audio_3[start_ind_3:start_ind_3 + self.cycle_len_va]
+            elif len(audio_3) < self.cycle_len_va:
+                audio_pad_3 = np.pad(audio_3, (0, self.cycle_len_va-len(audio_3)), mode='wrap')
+            elif len(audio_3) == self.cycle_len_va:
+                audio_pad_3 = audio_3
+            else:
+                print('Wrong audio length!')
+    
+            batch_audio_3.append(audio_pad_3)
+            batch_audio_2.append(audio_pad_2)
             batch_audio.append(audio_pad)
     
-        return batch_audio,batch_audio_ch,batch_audio_name
+        return batch_audio,batch_audio_2,batch_audio_name
 
     def generate_train(self):
         """Generate mini-batch data for training.
         Returns:
           batch_x: (batch_size, seq_len, freq_bins)
           batch_ch: (batch_size, seq_len, freq_bins)
+          batch_3: (batch_size, seq_len, freq_bins)
           batch_y: (batch_size,)
         """
 
@@ -155,12 +171,13 @@ class DataGenerator(object):
             
             iteration += 1
         
-            batch_x,batch_ch,batch_audio_names = self.read_batch_audio(batch_audio_indexes, 'train', 'ge_train')
+            batch_x,batch_ch,batch_3,batch_audio_names = self.read_batch_audio(batch_audio_indexes, 'train', 'ge_train')
             batch_x = np.array(batch_x)
             batch_ch = np.array(batch_ch)
+            batch_3 = np.array(batch_3)
             batch_y = self.train_y[batch_audio_indexes]
 
-            yield batch_x,batch_ch, batch_y, batch_audio_names
+            yield batch_x,batch_ch,batch_3, batch_y, batch_audio_names
 
     def generate_validate(self, data_type, shuffle, max_iteration=None):
         """Generate mini-batch data for evaluation. 
@@ -209,9 +226,10 @@ class DataGenerator(object):
             
             iteration += 1
 
-            batch_x,batch_ch, batch_audio_names = self.read_batch_audio(batch_audio_indexes, data_type, 'ge_validate')
+            batch_x,batch_ch,batch_3, batch_audio_names = self.read_batch_audio(batch_audio_indexes, data_type, 'ge_validate')
             batch_x = np.array(batch_x)
             batch_ch = np.array(batch_ch)
+            batch_3 = np.array(batch_3)
             if data_type == 'train':
                 batch_y = self.train_y[batch_audio_indexes]
             elif data_type == 'evaluate':
@@ -219,6 +237,6 @@ class DataGenerator(object):
             else:
                 raise Exception('Invalid data_type!')
 
-            yield batch_x,batch_ch, batch_y, batch_audio_names
+            yield batch_x,batch_ch, batch_3,batch_y, batch_audio_names
 
         
