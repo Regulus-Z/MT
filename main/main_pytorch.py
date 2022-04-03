@@ -274,12 +274,14 @@ def inference_validation_data(args):
     # Evaluate
     confusion_matrix = calculate_confusion_matrix(targets, predictions, classes_num)
     auc=calculate_auc(targets, scores, classes_num)
+    auc2=auc_2(targets,scores)
     class_wise_accuracy = calculate_accuracy(targets, predictions, classes_num)
     se, sp, as_score, hs_score = calculate_accuracy(targets, predictions, classes_num, average='binary')
 
     # Print
     print_accuracy(class_wise_accuracy, labels)
     print_auc(auc)
+    print_auc(auc2['AUC'])
     print_confusion_matrix(confusion_matrix, labels)
     #print('confusion_matrix: \n', confusion_matrix)
     print_accuracy_binary(se, sp, as_score, hs_score, labels)
