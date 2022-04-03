@@ -245,96 +245,52 @@ class DecisionLevelMaxPooling(nn.Module):
         dropout = 0.2
         self.multihead = MultiHead(n_head, n_hid, d_k, d_v, dropout)
         
-        self.fc_1 = nn.Linear(512, classes_num)#original:512 double?
-        self.fc_2 = nn.Linear(512, classes_num)#original:512 double?
-        self.fc_final = nn.Linear(1024, classes_num)#original:512 double?
+        self.fc_1 = nn.Linear(512, 1)#original:512 double?
+        self.fc_2 = nn.Linear(512, 1)#original:512 double?
+        self.fc_3 = nn.Linear(512, 1)#original:512 double?
+        self.fc_final = nn.Linear(3, classes_num)#original:512 double?
         self.init_weights()
 
     def init_weights(self):
         init_layer(self.fc_1)
         init_layer(self.fc_2)
+        init_layer(self.fc_3)
         init_layer(self.fc_final)
 
-    def forward(self, input1,input2,input3):
-        """input1,2: (samples_num, date_length) input3:(samples_num,class)
+    def forward(self, input1,input2,input3,input4):
+        """input1,2,4: (samples_num, date_length) input3:(samples_num,class)
         """
         x1 = self.spectrogram_extractor(input1)   # (batch_size, 1, time_steps, freq_bins)
         x1 = self.logmel_extractor(x1)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x1.shape
-        #find pos samples for SpecAugument
-        if self.training:
-            x_neg_ind=torch.nonzero(input3)
-            x_pos_ind=torch.nonzero(input3==0)
-            if len(x_neg_ind) is 0:
-                x1=self.spec_augmenter(x1)
-            elif len(x_pos_ind) is 0:
-                pass
-            else:
-                neg=torch.reshape(x_neg_ind(-1,))
-                pos=torch.reshape(x_pos_ind(-1,))
-                x_neg=torch.index_select(x1, 0, neg)
-                x_pos=torch.index_select(x1, 0, pos)
-                x_pos=self.spec_augmenter(x_pos)
-                j=0
-                k=0
-                for i in range(0,batch_size):
-                    if input3[i]==0:
-                        x1[i,:,:,:]=x_pos[j,:,:,:]
-                        j=j+1
-                    else:
-                        x1[i,:,:,:]=x_neg[k,:,:,:]
-                        k=k+1
             
         x1_diff1 = torch.diff(x1, n=1, dim=2, append=x1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1_diff2 = torch.diff(x1_diff1, n=1, dim=2, append=x1_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1 = torch.cat((x1, x1_diff1, x1_diff2), dim=1)
-
-        if False:
-            x1_array = x1.data.cpu().numpy()[0]
-            x1_array = np.squeeze(x1_array)
-            plt.matshow(x1_array.T, origin='lower', aspect='auto', cmap='jet')
-            plt.savefig('test.png')
-
         x1 = self.cnn_encoder(x1)
 
         ######add x2
         x2 = self.spectrogram_extractor(input2)   # (batch_size, 1, time_steps, freq_bins)
         x2 = self.logmel_extractor(x2)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x2.shape
-        
-        if self.training:
-            if len(x_neg_ind) is 0:
-                x2=self.spec_augmenter(x2)
-            elif len(x_pos_ind) is 0:
-                pass
-            else:
-                neg=torch.reshape(x_neg_ind(-1,))
-                pos=torch.reshape(x_pos_ind(-1,))
-                x_neg=torch.index_select(x2, 0, neg)
-                x_pos=torch.index_select(x2, 0, pos)
-                x_pos=self.spec_augmenter(x_pos)
-                j=0
-                k=0
-                for i in range(0,batch_size):
-                    if input3[i]==0:
-                        x2[i,:,:,:]=x_pos[j,:,:,:]
-                        j=j+1
-                    else:
-                        x2[i,:,:,:]=x_neg[k,:,:,:]
-                        k=k+1
+
         x2_diff1 = torch.diff(x2, n=1, dim=2, append=x2[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2_diff2 = torch.diff(x2_diff1, n=1, dim=2, append=x2_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
-        x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1)
-
-        if False:
-            x2_array = x2.data.cpu().numpy()[0]
-            x2_array = np.squeeze(x2_array)
-            plt.matshow(x2_array.T, origin='lower', aspect='auto', cmap='jet')
-            plt.savefig('test.png')
-
+        x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1
         x2 = self.cnn_encoder(x2)
+                       
+        ######add x3
+        x3 = self.spectrogram_extractor(input4)   # (batch_size, 1, time_steps, freq_bins)
+        x3 = self.logmel_extractor(x3)    # (batch_size, 1, time_steps, mel_bins)
+        batch_size, channel_num, _, mel_bins = x3.shape
+
+        x3_diff1 = torch.diff(x3, n=1, dim=2, append=x3[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
+        x3_diff2 = torch.diff(x3_diff1, n=1, dim=2, append=x3_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
+        x3 = torch.cat((x3, x3_diff1, x3_diff2), dim=1
+        x3 = self.cnn_encoder(x3)
         # (samples_num, 512, hidden_units)
-        ##################### where concatenate?
+        #####################  concatenate
+        '''
         x1 = torch.mean(x1, dim=3)
         x1 = x1.transpose(1, 2)   # (batch_size, time_steps, channels)
         x1 = self.multihead(x1, x1, x1)
@@ -346,10 +302,11 @@ class DecisionLevelMaxPooling(nn.Module):
         output1 = output1.view(output1.shape[0:2])
         output2 = F.max_pool2d(x2, kernel_size=x2.shape[2:])
         output2 = output2.view(output2.shape[0:2])
-        '''
+        
         x1=self.fc_1(x1)
         x2=self.fc_2(x2)
-        combined=torch.cat((x1,x2),1)
+        x3=self.fc_3(x3)
+        combined=torch.cat((x1,x2,x3),1)
         output = F.softmax(self.fc_final(combined), dim=-1)
 
         return output
