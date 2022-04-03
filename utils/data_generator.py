@@ -22,7 +22,7 @@ class DataGenerator(object):
         self.cycle_len = config.cycle_len
         #####add cycle length of cough
         self.cycle_len_ch = config.cycle_len_cough_heavy
-
+        self.cycle_len_va = config.cycle_len_va
         self.random_state = np.random.RandomState(seed)
         self.validate_random_state = np.random.RandomState(0)
         lb_to_ix = config.lb_to_ix
@@ -92,8 +92,6 @@ class DataGenerator(object):
                     start_ind = random.randint(0, len(audio) - self.cycle_len)
                 elif generate_type == 'ge_validate':
                     start_ind = int((len(audio) - self.cycle_len)/2)
-                elif generate_type== 'ge_specaug':
-                    start_ind = random.randint(0, len(audio) - self.cycle_len)
                 else:
                     print('Wrong data generation type')
                 audio_pad = audio[start_ind:start_ind + self.cycle_len]
