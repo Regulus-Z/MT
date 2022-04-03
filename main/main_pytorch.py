@@ -54,7 +54,7 @@ def evaluate(model, generator, data_type, max_iteration, cuda):
     scores=outputs[:,-1]
     # Evaluate
     classes_num = outputs.shape[-1]
-    output_log=lnp.log(outputs)
+    output_log=np.log(outputs)
     loss = F.nll_loss(Variable(torch.Tensor(output_log)), Variable(torch.LongTensor(targets))).data.numpy()
     loss = float(loss)
     
