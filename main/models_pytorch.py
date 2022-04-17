@@ -72,7 +72,7 @@ class ConvBlock(nn.Module):
         init_bn(self.bn1)
         init_bn(self.bn2)
 
-    def forward(self, input, pool_size=(2, 2), pool_type='max', activation='relu'):
+    def forward(self, input, pool_size=(2, 2), pool_type='avg+max', activation='relu'):
         x = input
         x = F.relu_(self.bn1(self.conv1(x)))
         if activation == 'relu':
@@ -234,21 +234,22 @@ class DecisionLevelMaxPooling(nn.Module):
         self.spec_augmenter = SpecAugmentation(time_drop_width=64, time_stripes_num=2, 
             freq_drop_width=8, freq_stripes_num=2)
         
-        self.cnn_encoder = CNN_encoder()
+        self.cnn_encoder1 = CNN_encoder()
         ###Encoder for cough-heavy
-        self.cnn_encoder_ch = CNN_encoder()
-        
+        self.cnn_encoder2 = CNN_encoder()
+        self.cnn_encoder3 = CNN_encoder()
         n_head = 8
         n_hid = 512
         d_k = 64
         d_v = 64
         dropout = 0.2
-        self.multihead = MultiHead(n_head, n_hid, d_k, d_v, dropout)
-        
-        self.fc_1 = nn.Linear(512, 1)#original:512 double?
-        self.fc_2 = nn.Linear(512, 1)#original:512 double?
-        self.fc_3 = nn.Linear(512, 1)#original:512 double?
-        self.fc_final = nn.Linear(3, classes_num)#original:512 double?
+        self.multihead1 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
+        self.multihead2 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
+        self.multihead3 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
+        self.fc_1 = nn.Linear(512, 512)#original:512 double?
+        self.fc_2 = nn.Linear(512, 512)#original:512 double?
+        self.fc_3 = nn.Linear(512, 512)#original:512 double?
+        self.fc_final = nn.Linear(3*512, classes_num)#original:512 double?
         self.init_weights()
 
     def init_weights(self):
@@ -267,7 +268,7 @@ class DecisionLevelMaxPooling(nn.Module):
         x1_diff1 = torch.diff(x1, n=1, dim=2, append=x1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1_diff2 = torch.diff(x1_diff1, n=1, dim=2, append=x1_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x1 = torch.cat((x1, x1_diff1, x1_diff2), dim=1)
-        x1 = self.cnn_encoder(x1)
+        x1 = self.cnn_encoder1(x1)
 
         ######add x2
         x2 = self.spectrogram_extractor(input2)   # (batch_size, 1, time_steps, freq_bins)
@@ -277,7 +278,7 @@ class DecisionLevelMaxPooling(nn.Module):
         x2_diff1 = torch.diff(x2, n=1, dim=2, append=x2[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2_diff2 = torch.diff(x2_diff1, n=1, dim=2, append=x2_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1
-        x2 = self.cnn_encoder(x2)
+        x2 = self.cnn_encoder2(x2)
                        
         ######add x3
         x3 = self.spectrogram_extractor(input4)   # (batch_size, 1, time_steps, freq_bins)
@@ -287,7 +288,7 @@ class DecisionLevelMaxPooling(nn.Module):
         x3_diff1 = torch.diff(x3, n=1, dim=2, append=x3[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x3_diff2 = torch.diff(x3_diff1, n=1, dim=2, append=x3_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x3 = torch.cat((x3, x3_diff1, x3_diff2), dim=1
-        x3 = self.cnn_encoder(x3)
+        x3 = self.cnn_encoder3(x3)
         # (samples_num, 512, hidden_units)
         #####################  concatenate
         '''
@@ -302,11 +303,12 @@ class DecisionLevelMaxPooling(nn.Module):
         output1 = output1.view(output1.shape[0:2])
         output2 = F.max_pool2d(x2, kernel_size=x2.shape[2:])
         output2 = output2.view(output2.shape[0:2])
-        
-        x1=self.fc_1(x1)
-        x2=self.fc_2(x2)
-        x3=self.fc_3(x3)
-        combined=torch.cat((x1,x2,x3),1)
+        output3 = F.max_pool2d(x3, kernel_size=x3.shape[2:])
+        output3 = output2.view(output2.shape[0:2])
+        xx1=F.relu(self.fc_1(output1))
+        xx2=F.relu(self.fc_2(output2))
+        xx3=F.relu(self.fc_3(output3))
+        combined=torch.cat((xx1,xx2,xx3),1)
         output = F.softmax(self.fc_final(combined), dim=-1)
 
         return output
