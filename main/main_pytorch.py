@@ -14,7 +14,7 @@ from torch.autograd import Variable
 from data_generator import DataGenerator
 from utilities import (create_folder, get_filename, create_logging,
                        calculate_confusion_matrix, calculate_accuracy, 
-                       print_confusion_matrix, print_accuracy, print_accuracy_binary,auc_2,calculate_auc,print_auc)
+                       print_confusion_matrix, print_accuracy, print_accuracy_binary,auc_2,calculate_auc,print_auc，auc_2)
 from models_pytorch import move_data_to_gpu, DecisionLevelMaxPooling
 import config
 
@@ -59,8 +59,8 @@ def evaluate(model, generator, data_type, max_iteration, cuda):
     loss = float(loss)
     
     accuracy = calculate_accuracy(targets, predictions, classes_num, average='macro')
-    auc=calculate_auc(targets, scores, classes_num)
-    return accuracy, loss,auc
+    auc=auc_2(targets, scores)
+    return accuracy, loss,auc['AUC']
 
 def forward(model, generate_func, cuda):
     """Forward data to a model.
@@ -163,7 +163,7 @@ def train(args):
                                          max_iteration=None,
                                          cuda=cuda)
 
-            logging.info('tr_acc: {:.3f}, tr_loss: {:.3f}'.format(tr_acc, tr_loss))
+            logging.info('tr_acc: {:.3f}, tr_loss: {:.3f},auc:{:.3f}'.format(tr_acc, tr_loss,tr_auc))
 
             (va_acc, va_loss,va_auc) = evaluate(model=model,
                                          generator=generator,
@@ -171,7 +171,7 @@ def train(args):
                                          max_iteration=None,
                                          cuda=cuda)
                                 
-            logging.info('va_acc: {:.3f}, va_loss: {:.3f}'.format(va_acc, va_loss))
+            logging.info('va_acc: {:.3f}, va_loss: {:.3f},auc:{:.3f}'.format(va_acc, va_loss,va_auc))
 
             train_time = train_fin_time - train_bgn_time
             validate_time = time.time() - train_fin_time
@@ -201,7 +201,7 @@ def train(args):
         batch_3 = move_data_to_gpu(batch_3, cuda)
         # Train
         model.train()
-        batch_output = model(batch_x,batch_ch,,batch_3,batch_y)
+        batch_output = model(batch_x,batch_ch,batch_3,batch_y)
         log_output=torch.log(batch_output)
         loss = F.nll_loss(log_output, batch_y, weight=class_weight)
 
@@ -275,7 +275,7 @@ def inference_validation_data(args):
     
     # Evaluate
     confusion_matrix = calculate_confusion_matrix(targets, predictions, classes_num)
-    auc=calculate_auc(targets, scores, classes_num)
+    #auc=calculate_auc(targets, scores, classes_num)
     auc2=auc_2(targets,scores)
     class_wise_accuracy = calculate_accuracy(targets, predictions, classes_num)
     se, sp, as_score, hs_score = calculate_accuracy(targets, predictions, classes_num, average='binary')
