@@ -10,6 +10,8 @@ import torchlibrosa as tl
 import numpy as np
 import matplotlib.pyplot as plt
 import config
+from conformer.encoder import ConformerEncoder
+from conformer.modules import Linear
 
 def move_data_to_gpu(x, cuda):
 
@@ -231,11 +233,10 @@ class DecisionLevelMaxPooling(nn.Module):
             n_mels=mel_bins, fmin=20, fmax=8000, ref=ref, amin=amin, top_db=top_db,
             freeze_parameters=True)
         ###SpecAugument
-        self.spec_augmenter = SpecAugmentation(time_drop_width=64, time_stripes_num=2, 
-            freq_drop_width=8, freq_stripes_num=2)
+        #self.spec_augmenter = SpecAugmentation(time_drop_width=64, time_stripes_num=2, 
+        #    freq_drop_width=8, freq_stripes_num=2)
         
         self.cnn_encoder1 = CNN_encoder()
-        ###Encoder for cough-heavy
         self.cnn_encoder2 = CNN_encoder()
         self.cnn_encoder3 = CNN_encoder()
         n_head = 8
@@ -243,13 +244,57 @@ class DecisionLevelMaxPooling(nn.Module):
         d_k = 64
         d_v = 64
         dropout = 0.2
+        '''
         self.multihead1 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
         self.multihead2 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
         self.multihead3 = MultiHead(n_head, n_hid, d_k, d_v, dropout)
-        self.fc_1 = nn.Linear(512, 512)#original:512 double?
-        self.fc_2 = nn.Linear(512, 512)#original:512 double?
-        self.fc_3 = nn.Linear(512, 512)#original:512 double?
-        self.fc_final = nn.Linear(3*512, classes_num)#original:512 double?
+        '''
+        self.conformer_encoder1 = ConformerEncoder(
+            input_dim=64,
+            encoder_dim=512,
+            num_layers=3,
+            num_attention_heads=8,
+            feed_forward_expansion_factor=4,
+            conv_expansion_factor=2,
+            input_dropout_p=0.1,
+            feed_forward_dropout_p=0.1,
+            attention_dropout_p=0.1,
+            conv_dropout_p=0.1,
+            conv_kernel_size=15,#31
+            half_step_residual=True,
+        )
+        self.conformer_encoder2 = ConformerEncoder(
+            input_dim=64,
+            encoder_dim=512,
+            num_layers=3,
+            num_attention_heads=8,
+            feed_forward_expansion_factor=4,
+            conv_expansion_factor=2,
+            input_dropout_p=0.1,
+            feed_forward_dropout_p=0.1,
+            attention_dropout_p=0.1,
+            conv_dropout_p=0.1,
+            conv_kernel_size=15,#31
+            half_step_residual=True,
+        )
+        self.conformer_encoder3 = ConformerEncoder(
+            input_dim=64,
+            encoder_dim=512,
+            num_layers=3,
+            num_attention_heads=8,
+            feed_forward_expansion_factor=4,
+            conv_expansion_factor=2,
+            input_dropout_p=0.1,
+            feed_forward_dropout_p=0.1,
+            attention_dropout_p=0.1,
+            conv_dropout_p=0.1,
+            conv_kernel_size=15,#31
+            half_step_residual=True,
+        )
+        self.fc_1 = nn.Linear(512, 512)
+        self.fc_2 = nn.Linear(512, 512)
+        self.fc_3 = nn.Linear(512, 512)
+        self.fc_final = nn.Linear(3*512, classes_num)
         self.init_weights()
 
     def init_weights(self):
@@ -274,7 +319,6 @@ class DecisionLevelMaxPooling(nn.Module):
         x2 = self.spectrogram_extractor(input2)   # (batch_size, 1, time_steps, freq_bins)
         x2 = self.logmel_extractor(x2)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x2.shape
-
         x2_diff1 = torch.diff(x2, n=1, dim=2, append=x2[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2_diff2 = torch.diff(x2_diff1, n=1, dim=2, append=x2_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1
@@ -284,7 +328,6 @@ class DecisionLevelMaxPooling(nn.Module):
         x3 = self.spectrogram_extractor(input4)   # (batch_size, 1, time_steps, freq_bins)
         x3 = self.logmel_extractor(x3)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x3.shape
-
         x3_diff1 = torch.diff(x3, n=1, dim=2, append=x3[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x3_diff2 = torch.diff(x3_diff1, n=1, dim=2, append=x3_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x3 = torch.cat((x3, x3_diff1, x3_diff2), dim=1
@@ -299,12 +342,27 @@ class DecisionLevelMaxPooling(nn.Module):
         x2 = x2.transpose(1, 2)   # (batch_size, time_steps, channels)
         x2 = self.multihead(x2, x2, x2)
         '''
+        '''
         output1 = F.max_pool2d(x1, kernel_size=x1.shape[2:])
         output1 = output1.view(output1.shape[0:2])
         output2 = F.max_pool2d(x2, kernel_size=x2.shape[2:])
         output2 = output2.view(output2.shape[0:2])
         output3 = F.max_pool2d(x3, kernel_size=x3.shape[2:])
         output3 = output2.view(output2.shape[0:2])
+        '''
+        x1 = torch.mean(x1,dim=3)
+        x1 = x1.transpose(1, 2)
+        output1, encoder_output_length_1 = conformer_encoder1(x1, x1.shape[-1])# (batch_size, time_steps, channels)
+        output1 = torch.mean(output1,dim=1)
+        x2 = torch.mean(x2,dim=3)
+        x2 = x2.transpose(1, 2)
+        output2, encoder_output_length_2 = conformer_encoder2(x2, x2.shape[-1])# (batch_size, time_steps, channels)
+        output2 = torch.mean(output2,dim=1)
+        x3 = torch.mean(x3,dim=3)
+        x3 = x3.transpose(1, 2)
+        output3, encoder_output_length_3 = conformer_encoder3(x3, x3.shape[-1])# (batch_size, time_steps, channels)
+        output3 = torch.mean(output3,dim=1)
+                       
         xx1=F.relu(self.fc_1(output1))
         xx2=F.relu(self.fc_2(output2))
         xx3=F.relu(self.fc_3(output3))
