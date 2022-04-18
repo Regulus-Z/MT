@@ -303,7 +303,7 @@ class DecisionLevelMaxPooling(nn.Module):
         init_layer(self.fc_3)
         init_layer(self.fc_final)
 
-    def forward(self, input1,input2,input3,input4):
+    def forward(self, input1,input2,input3):
         """input1,2,4: (samples_num, date_length) input3:(samples_num,class)
         """
         x1 = self.spectrogram_extractor(input1)   # (batch_size, 1, time_steps, freq_bins)
@@ -325,7 +325,7 @@ class DecisionLevelMaxPooling(nn.Module):
         x2 = self.cnn_encoder2(x2)
                        
         ######add x3
-        x3 = self.spectrogram_extractor(input4)   # (batch_size, 1, time_steps, freq_bins)
+        x3 = self.spectrogram_extractor(input3)   # (batch_size, 1, time_steps, freq_bins)
         x3 = self.logmel_extractor(x3)    # (batch_size, 1, time_steps, mel_bins)
         batch_size, channel_num, _, mel_bins = x3.shape
         x3_diff1 = torch.diff(x3, n=1, dim=2, append=x3[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
@@ -352,15 +352,15 @@ class DecisionLevelMaxPooling(nn.Module):
         '''
         x1 = torch.mean(x1,dim=3)
         x1 = x1.transpose(1, 2)
-        output1, encoder_output_length_1 = conformer_encoder1(x1, x1.shape[-1])# (batch_size, time_steps, channels)
+        output1, encoder_output_length_1 = self.conformer_encoder1(x1, x1.shape[-1])# (batch_size, time_steps, channels)
         output1 = torch.mean(output1,dim=1)
         x2 = torch.mean(x2,dim=3)
         x2 = x2.transpose(1, 2)
-        output2, encoder_output_length_2 = conformer_encoder2(x2, x2.shape[-1])# (batch_size, time_steps, channels)
+        output2, encoder_output_length_2 = self.conformer_encoder2(x2, x2.shape[-1])# (batch_size, time_steps, channels)
         output2 = torch.mean(output2,dim=1)
         x3 = torch.mean(x3,dim=3)
         x3 = x3.transpose(1, 2)
-        output3, encoder_output_length_3 = conformer_encoder3(x3, x3.shape[-1])# (batch_size, time_steps, channels)
+        output3, encoder_output_length_3 = self.conformer_encoder3(x3, x3.shape[-1])# (batch_size, time_steps, channels)
         output3 = torch.mean(output3,dim=1)
                        
         xx1=F.relu(self.fc_1(output1))
