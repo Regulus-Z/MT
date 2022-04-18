@@ -321,7 +321,7 @@ class DecisionLevelMaxPooling(nn.Module):
         batch_size, channel_num, _, mel_bins = x2.shape
         x2_diff1 = torch.diff(x2, n=1, dim=2, append=x2[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x2_diff2 = torch.diff(x2_diff1, n=1, dim=2, append=x2_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
-        x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1
+        x2 = torch.cat((x2, x2_diff1, x2_diff2), dim=1)
         x2 = self.cnn_encoder2(x2)
                        
         ######add x3
@@ -330,7 +330,7 @@ class DecisionLevelMaxPooling(nn.Module):
         batch_size, channel_num, _, mel_bins = x3.shape
         x3_diff1 = torch.diff(x3, n=1, dim=2, append=x3[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
         x3_diff2 = torch.diff(x3_diff1, n=1, dim=2, append=x3_diff1[:, :, -1, :].view((batch_size, channel_num, 1, mel_bins)))
-        x3 = torch.cat((x3, x3_diff1, x3_diff2), dim=1
+        x3 = torch.cat((x3, x3_diff1, x3_diff2), dim=1)
         x3 = self.cnn_encoder3(x3)
         # (samples_num, 512, hidden_units)
         #####################  concatenate
