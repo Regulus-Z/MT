@@ -1,0 +1,646 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=15000, mode='train', subdir='models_dev', validate=True, workspace='../../experiment_workspace/baseline_cnn/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+root        : INFO     tr_acc: 0.500, tr_loss: 0.385
+root        : INFO     va_acc: 0.500, va_loss: 0.411
+root        : INFO     iteration: 0, train time: 0.303 s, validate time: 32.361 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.522, tr_loss: 2.308
+root        : INFO     va_acc: 0.539, va_loss: 2.201
+root        : INFO     iteration: 100, train time: 22.038 s, validate time: 12.237 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.624, tr_loss: 0.820
+root        : INFO     va_acc: 0.499, va_loss: 0.881
+root        : INFO     iteration: 200, train time: 22.103 s, validate time: 13.017 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.531, tr_loss: 1.971
+root        : INFO     va_acc: 0.561, va_loss: 1.851
+root        : INFO     iteration: 300, train time: 22.039 s, validate time: 13.440 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.526, tr_loss: 0.480
+root        : INFO     va_acc: 0.538, va_loss: 0.602
+root        : INFO     iteration: 400, train time: 20.621 s, validate time: 13.042 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.502, tr_loss: 0.336
+root        : INFO     va_acc: 0.500, va_loss: 0.422
+root        : INFO     iteration: 500, train time: 22.900 s, validate time: 13.745 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.586, tr_loss: 0.900
+root        : INFO     va_acc: 0.556, va_loss: 0.899
+root        : INFO     iteration: 600, train time: 23.216 s, validate time: 13.592 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.502, tr_loss: 3.368
+root        : INFO     va_acc: 0.500, va_loss: 3.348
+root        : INFO     iteration: 700, train time: 24.132 s, validate time: 13.420 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.542, tr_loss: 0.368
+root        : INFO     va_acc: 0.483, va_loss: 0.444
+root        : INFO     iteration: 800, train time: 24.437 s, validate time: 11.242 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.561, tr_loss: 1.209
+root        : INFO     va_acc: 0.527, va_loss: 1.237
+root        : INFO     iteration: 900, train time: 23.618 s, validate time: 13.327 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.531, tr_loss: 0.316
+root        : INFO     va_acc: 0.514, va_loss: 0.414
+root        : INFO     iteration: 1000, train time: 23.360 s, validate time: 13.362 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_1000_iters.tar
+root        : INFO     tr_acc: 0.666, tr_loss: 0.503
+root        : INFO     va_acc: 0.520, va_loss: 0.581
+root        : INFO     iteration: 1100, train time: 23.869 s, validate time: 13.508 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.661, tr_loss: 0.391
+root        : INFO     va_acc: 0.535, va_loss: 0.457
+root        : INFO     iteration: 1200, train time: 21.113 s, validate time: 16.977 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.662, tr_loss: 0.874
+root        : INFO     va_acc: 0.551, va_loss: 0.876
+root        : INFO     iteration: 1300, train time: 22.900 s, validate time: 13.729 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.594, tr_loss: 0.368
+root        : INFO     va_acc: 0.537, va_loss: 0.417
+root        : INFO     iteration: 1400, train time: 22.023 s, validate time: 13.598 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.646, tr_loss: 0.415
+root        : INFO     va_acc: 0.544, va_loss: 0.496
+root        : INFO     iteration: 1500, train time: 23.918 s, validate time: 13.609 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.533, tr_loss: 1.467
+root        : INFO     va_acc: 0.512, va_loss: 1.491
+root        : INFO     iteration: 1600, train time: 24.363 s, validate time: 12.119 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.574, tr_loss: 1.095
+root        : INFO     va_acc: 0.569, va_loss: 1.098
+root        : INFO     iteration: 1700, train time: 23.263 s, validate time: 13.223 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.568, tr_loss: 0.910
+root        : INFO     va_acc: 0.527, va_loss: 0.967
+root        : INFO     iteration: 1800, train time: 24.485 s, validate time: 13.124 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 2.907
+root        : INFO     va_acc: 0.500, va_loss: 2.953
+root        : INFO     iteration: 1900, train time: 24.196 s, validate time: 14.081 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.556, tr_loss: 1.110
+root        : INFO     va_acc: 0.552, va_loss: 1.142
+root        : INFO     iteration: 2000, train time: 21.913 s, validate time: 12.743 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_2000_iters.tar
+root        : INFO     tr_acc: 0.662, tr_loss: 0.453
+root        : INFO     va_acc: 0.501, va_loss: 0.543
+root        : INFO     iteration: 2100, train time: 24.761 s, validate time: 12.980 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.737, tr_loss: 0.380
+root        : INFO     va_acc: 0.563, va_loss: 0.487
+root        : INFO     iteration: 2200, train time: 23.431 s, validate time: 13.823 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.695, tr_loss: 0.822
+root        : INFO     va_acc: 0.566, va_loss: 0.874
+root        : INFO     iteration: 2300, train time: 23.157 s, validate time: 13.084 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.739, tr_loss: 0.538
+root        : INFO     va_acc: 0.539, va_loss: 0.655
+root        : INFO     iteration: 2400, train time: 22.892 s, validate time: 13.187 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.747, tr_loss: 0.509
+root        : INFO     va_acc: 0.588, va_loss: 0.624
+root        : INFO     iteration: 2500, train time: 24.477 s, validate time: 13.811 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.534, tr_loss: 1.504
+root        : INFO     va_acc: 0.515, va_loss: 1.588
+root        : INFO     iteration: 2600, train time: 23.002 s, validate time: 12.869 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.731, tr_loss: 0.674
+root        : INFO     va_acc: 0.592, va_loss: 0.735
+root        : INFO     iteration: 2700, train time: 23.746 s, validate time: 14.088 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.731, tr_loss: 0.396
+root        : INFO     va_acc: 0.607, va_loss: 0.491
+root        : INFO     iteration: 2800, train time: 22.119 s, validate time: 14.022 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.751, tr_loss: 0.487
+root        : INFO     va_acc: 0.562, va_loss: 0.593
+root        : INFO     iteration: 2900, train time: 22.864 s, validate time: 12.862 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.691, tr_loss: 0.358
+root        : INFO     va_acc: 0.624, va_loss: 0.434
+root        : INFO     iteration: 3000, train time: 21.208 s, validate time: 13.701 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_3000_iters.tar
+root        : INFO     tr_acc: 0.744, tr_loss: 0.473
+root        : INFO     va_acc: 0.559, va_loss: 0.563
+root        : INFO     iteration: 3100, train time: 25.378 s, validate time: 13.646 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.781, tr_loss: 0.578
+root        : INFO     va_acc: 0.634, va_loss: 0.682
+root        : INFO     iteration: 3200, train time: 23.303 s, validate time: 12.681 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.534, tr_loss: 1.752
+root        : INFO     va_acc: 0.522, va_loss: 1.827
+root        : INFO     iteration: 3300, train time: 21.522 s, validate time: 11.454 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.790, tr_loss: 0.543
+root        : INFO     va_acc: 0.609, va_loss: 0.681
+root        : INFO     iteration: 3400, train time: 20.503 s, validate time: 13.181 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.721, tr_loss: 0.840
+root        : INFO     va_acc: 0.581, va_loss: 0.966
+root        : INFO     iteration: 3500, train time: 24.300 s, validate time: 13.496 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.622, tr_loss: 1.081
+root        : INFO     va_acc: 0.583, va_loss: 1.170
+root        : INFO     iteration: 3600, train time: 20.744 s, validate time: 11.359 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 3.387
+root        : INFO     va_acc: 0.502, va_loss: 3.395
+root        : INFO     iteration: 3700, train time: 23.019 s, validate time: 12.713 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.722, tr_loss: 0.780
+root        : INFO     va_acc: 0.569, va_loss: 0.893
+root        : INFO     iteration: 3800, train time: 23.590 s, validate time: 13.775 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.793, tr_loss: 0.592
+root        : INFO     va_acc: 0.600, va_loss: 0.714
+root        : INFO     iteration: 3900, train time: 23.380 s, validate time: 12.963 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.795, tr_loss: 0.293
+root        : INFO     va_acc: 0.541, va_loss: 0.468
+root        : INFO     iteration: 4000, train time: 20.974 s, validate time: 13.136 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_4000_iters.tar
+root        : INFO     tr_acc: 0.830, tr_loss: 0.335
+root        : INFO     va_acc: 0.518, va_loss: 0.517
+root        : INFO     iteration: 4100, train time: 22.805 s, validate time: 13.098 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.864, tr_loss: 0.400
+root        : INFO     va_acc: 0.561, va_loss: 0.559
+root        : INFO     iteration: 4200, train time: 21.197 s, validate time: 12.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.746, tr_loss: 0.602
+root        : INFO     va_acc: 0.583, va_loss: 0.760
+root        : INFO     iteration: 4300, train time: 21.415 s, validate time: 12.780 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.686, tr_loss: 1.018
+root        : INFO     va_acc: 0.614, va_loss: 1.177
+root        : INFO     iteration: 4400, train time: 21.793 s, validate time: 13.167 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.643, tr_loss: 0.217
+root        : INFO     va_acc: 0.495, va_loss: 0.407
+root        : INFO     iteration: 4500, train time: 21.277 s, validate time: 12.147 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.796, tr_loss: 0.691
+root        : INFO     va_acc: 0.667, va_loss: 0.862
+root        : INFO     iteration: 4600, train time: 20.659 s, validate time: 13.393 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.717, tr_loss: 0.936
+root        : INFO     va_acc: 0.604, va_loss: 1.113
+root        : INFO     iteration: 4700, train time: 22.440 s, validate time: 13.290 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.576, tr_loss: 0.286
+root        : INFO     va_acc: 0.492, va_loss: 0.516
+root        : INFO     iteration: 4800, train time: 23.536 s, validate time: 13.563 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.732, tr_loss: 0.847
+root        : INFO     va_acc: 0.607, va_loss: 1.017
+root        : INFO     iteration: 4900, train time: 21.949 s, validate time: 13.431 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.849, tr_loss: 0.405
+root        : INFO     va_acc: 0.612, va_loss: 0.578
+root        : INFO     iteration: 5000, train time: 22.997 s, validate time: 12.268 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_5000_iters.tar
+root        : INFO     tr_acc: 0.851, tr_loss: 0.276
+root        : INFO     va_acc: 0.557, va_loss: 0.470
+root        : INFO     iteration: 5100, train time: 24.283 s, validate time: 13.260 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.875, tr_loss: 0.450
+root        : INFO     va_acc: 0.679, va_loss: 0.666
+root        : INFO     iteration: 5200, train time: 24.171 s, validate time: 13.343 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.834, tr_loss: 0.562
+root        : INFO     va_acc: 0.638, va_loss: 0.712
+root        : INFO     iteration: 5300, train time: 22.838 s, validate time: 18.151 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.888, tr_loss: 0.226
+root        : INFO     va_acc: 0.506, va_loss: 0.486
+root        : INFO     iteration: 5400, train time: 22.821 s, validate time: 17.532 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.877, tr_loss: 0.325
+root        : INFO     va_acc: 0.574, va_loss: 0.520
+root        : INFO     iteration: 5500, train time: 21.933 s, validate time: 18.873 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.856, tr_loss: 0.486
+root        : INFO     va_acc: 0.552, va_loss: 0.704
+root        : INFO     iteration: 5600, train time: 24.470 s, validate time: 18.880 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.824, tr_loss: 0.256
+root        : INFO     va_acc: 0.559, va_loss: 0.429
+root        : INFO     iteration: 5700, train time: 21.450 s, validate time: 17.985 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.904, tr_loss: 0.265
+root        : INFO     va_acc: 0.578, va_loss: 0.516
+root        : INFO     iteration: 5800, train time: 25.623 s, validate time: 19.341 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.878, tr_loss: 0.368
+root        : INFO     va_acc: 0.534, va_loss: 0.630
+root        : INFO     iteration: 5900, train time: 27.272 s, validate time: 19.354 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.904, tr_loss: 0.320
+root        : INFO     va_acc: 0.567, va_loss: 0.562
+root        : INFO     iteration: 6000, train time: 26.231 s, validate time: 17.482 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_6000_iters.tar
+root        : INFO     tr_acc: 0.871, tr_loss: 0.429
+root        : INFO     va_acc: 0.652, va_loss: 0.617
+root        : INFO     iteration: 6100, train time: 28.937 s, validate time: 18.809 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.876, tr_loss: 0.159
+root        : INFO     va_acc: 0.521, va_loss: 0.428
+root        : INFO     iteration: 6200, train time: 27.223 s, validate time: 17.236 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.752, tr_loss: 0.845
+root        : INFO     va_acc: 0.640, va_loss: 1.068
+root        : INFO     iteration: 6300, train time: 26.651 s, validate time: 20.202 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.817, tr_loss: 0.641
+root        : INFO     va_acc: 0.631, va_loss: 0.918
+root        : INFO     iteration: 6400, train time: 22.698 s, validate time: 18.187 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.899, tr_loss: 0.388
+root        : INFO     va_acc: 0.574, va_loss: 0.665
+root        : INFO     iteration: 6500, train time: 23.751 s, validate time: 17.242 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.883, tr_loss: 0.381
+root        : INFO     va_acc: 0.628, va_loss: 0.648
+root        : INFO     iteration: 6600, train time: 21.922 s, validate time: 17.752 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.348
+root        : INFO     va_acc: 0.604, va_loss: 0.603
+root        : INFO     iteration: 6700, train time: 22.909 s, validate time: 19.097 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.230
+root        : INFO     va_acc: 0.553, va_loss: 0.515
+root        : INFO     iteration: 6800, train time: 21.892 s, validate time: 15.873 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.908, tr_loss: 0.360
+root        : INFO     va_acc: 0.581, va_loss: 0.645
+root        : INFO     iteration: 6900, train time: 22.261 s, validate time: 18.704 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.801, tr_loss: 0.135
+root        : INFO     va_acc: 0.562, va_loss: 0.440
+root        : INFO     iteration: 7000, train time: 21.206 s, validate time: 17.999 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_7000_iters.tar
+root        : INFO     tr_acc: 0.859, tr_loss: 0.524
+root        : INFO     va_acc: 0.640, va_loss: 0.822
+root        : INFO     iteration: 7100, train time: 23.243 s, validate time: 19.003 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.838, tr_loss: 0.592
+root        : INFO     va_acc: 0.679, va_loss: 0.848
+root        : INFO     iteration: 7200, train time: 21.534 s, validate time: 19.055 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.947, tr_loss: 0.143
+root        : INFO     va_acc: 0.544, va_loss: 0.426
+root        : INFO     iteration: 7300, train time: 22.385 s, validate time: 19.104 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.932, tr_loss: 0.263
+root        : INFO     va_acc: 0.610, va_loss: 0.524
+root        : INFO     iteration: 7400, train time: 22.105 s, validate time: 17.899 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.919, tr_loss: 0.200
+root        : INFO     va_acc: 0.567, va_loss: 0.482
+root        : INFO     iteration: 7500, train time: 22.405 s, validate time: 18.784 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.899, tr_loss: 0.399
+root        : INFO     va_acc: 0.581, va_loss: 0.734
+root        : INFO     iteration: 7600, train time: 25.018 s, validate time: 18.401 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.925, tr_loss: 0.164
+root        : INFO     va_acc: 0.574, va_loss: 0.469
+root        : INFO     iteration: 7700, train time: 21.445 s, validate time: 19.440 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.635, tr_loss: 0.192
+root        : INFO     va_acc: 0.510, va_loss: 0.644
+root        : INFO     iteration: 7800, train time: 21.626 s, validate time: 19.093 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.136
+root        : INFO     va_acc: 0.530, va_loss: 0.484
+root        : INFO     iteration: 7900, train time: 20.939 s, validate time: 19.579 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.928, tr_loss: 0.254
+root        : INFO     va_acc: 0.612, va_loss: 0.542
+root        : INFO     iteration: 8000, train time: 24.095 s, validate time: 20.745 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_8000_iters.tar
+root        : INFO     tr_acc: 0.805, tr_loss: 0.733
+root        : INFO     va_acc: 0.620, va_loss: 1.126
+root        : INFO     iteration: 8100, train time: 28.772 s, validate time: 17.152 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.920, tr_loss: 0.336
+root        : INFO     va_acc: 0.624, va_loss: 0.684
+root        : INFO     iteration: 8200, train time: 27.358 s, validate time: 18.314 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.333
+root        : INFO     va_acc: 0.588, va_loss: 0.743
+root        : INFO     iteration: 8300, train time: 27.025 s, validate time: 17.728 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.957, tr_loss: 0.165
+root        : INFO     va_acc: 0.551, va_loss: 0.509
+root        : INFO     iteration: 8400, train time: 25.395 s, validate time: 19.357 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.961, tr_loss: 0.174
+root        : INFO     va_acc: 0.556, va_loss: 0.544
+root        : INFO     iteration: 8500, train time: 22.968 s, validate time: 19.271 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.880, tr_loss: 0.451
+root        : INFO     va_acc: 0.592, va_loss: 0.875
+root        : INFO     iteration: 8600, train time: 27.330 s, validate time: 16.807 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.942, tr_loss: 0.093
+root        : INFO     va_acc: 0.557, va_loss: 0.473
+root        : INFO     iteration: 8700, train time: 27.197 s, validate time: 18.230 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.872, tr_loss: 0.496
+root        : INFO     va_acc: 0.648, va_loss: 0.908
+root        : INFO     iteration: 8800, train time: 25.646 s, validate time: 18.265 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.979, tr_loss: 0.146
+root        : INFO     va_acc: 0.555, va_loss: 0.550
+root        : INFO     iteration: 8900, train time: 25.134 s, validate time: 17.969 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.668, tr_loss: 1.263
+root        : INFO     va_acc: 0.532, va_loss: 1.772
+root        : INFO     iteration: 9000, train time: 26.640 s, validate time: 17.633 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_9000_iters.tar
+root        : INFO     tr_acc: 0.952, tr_loss: 0.216
+root        : INFO     va_acc: 0.574, va_loss: 0.624
+root        : INFO     iteration: 9100, train time: 25.603 s, validate time: 18.232 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.973, tr_loss: 0.130
+root        : INFO     va_acc: 0.590, va_loss: 0.554
+root        : INFO     iteration: 9200, train time: 21.174 s, validate time: 18.431 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.955, tr_loss: 0.206
+root        : INFO     va_acc: 0.598, va_loss: 0.653
+root        : INFO     iteration: 9300, train time: 23.932 s, validate time: 18.776 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.962, tr_loss: 0.160
+root        : INFO     va_acc: 0.537, va_loss: 0.628
+root        : INFO     iteration: 9400, train time: 21.652 s, validate time: 18.073 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.979, tr_loss: 0.106
+root        : INFO     va_acc: 0.595, va_loss: 0.565
+root        : INFO     iteration: 9500, train time: 21.546 s, validate time: 19.356 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.878, tr_loss: 0.488
+root        : INFO     va_acc: 0.588, va_loss: 1.016
+root        : INFO     iteration: 9600, train time: 21.350 s, validate time: 18.425 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.979, tr_loss: 0.082
+root        : INFO     va_acc: 0.586, va_loss: 0.499
+root        : INFO     iteration: 9700, train time: 22.173 s, validate time: 19.137 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.974, tr_loss: 0.128
+root        : INFO     va_acc: 0.619, va_loss: 0.569
+root        : INFO     iteration: 9800, train time: 21.883 s, validate time: 19.998 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.973, tr_loss: 0.142
+root        : INFO     va_acc: 0.582, va_loss: 0.592
+root        : INFO     iteration: 9900, train time: 22.259 s, validate time: 18.876 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.909, tr_loss: 0.357
+root        : INFO     va_acc: 0.578, va_loss: 0.810
+root        : INFO     iteration: 10000, train time: 21.858 s, validate time: 18.212 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_10000_iters.tar
+root        : INFO     tr_acc: 0.934, tr_loss: 0.253
+root        : INFO     va_acc: 0.581, va_loss: 0.670
+root        : INFO     iteration: 10100, train time: 23.267 s, validate time: 15.584 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.920, tr_loss: 0.294
+root        : INFO     va_acc: 0.556, va_loss: 0.743
+root        : INFO     iteration: 10200, train time: 21.224 s, validate time: 18.652 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.936, tr_loss: 0.054
+root        : INFO     va_acc: 0.530, va_loss: 0.552
+root        : INFO     iteration: 10300, train time: 20.649 s, validate time: 16.433 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.955, tr_loss: 0.190
+root        : INFO     va_acc: 0.587, va_loss: 0.715
+root        : INFO     iteration: 10400, train time: 26.708 s, validate time: 19.364 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.977, tr_loss: 0.127
+root        : INFO     va_acc: 0.544, va_loss: 0.661
+root        : INFO     iteration: 10500, train time: 21.478 s, validate time: 19.881 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.977, tr_loss: 0.132
+root        : INFO     va_acc: 0.595, va_loss: 0.604
+root        : INFO     iteration: 10600, train time: 21.101 s, validate time: 16.571 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.994, tr_loss: 0.070
+root        : INFO     va_acc: 0.552, va_loss: 0.564
+root        : INFO     iteration: 10700, train time: 22.063 s, validate time: 12.375 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.964, tr_loss: 0.199
+root        : INFO     va_acc: 0.593, va_loss: 0.666
+root        : INFO     iteration: 10800, train time: 24.017 s, validate time: 12.400 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.976, tr_loss: 0.121
+root        : INFO     va_acc: 0.591, va_loss: 0.610
+root        : INFO     iteration: 10900, train time: 22.277 s, validate time: 13.423 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.961, tr_loss: 0.186
+root        : INFO     va_acc: 0.591, va_loss: 0.690
+root        : INFO     iteration: 11000, train time: 24.226 s, validate time: 13.836 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_11000_iters.tar
+root        : INFO     tr_acc: 0.966, tr_loss: 0.150
+root        : INFO     va_acc: 0.565, va_loss: 0.670
+root        : INFO     iteration: 11100, train time: 26.131 s, validate time: 13.543 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.982, tr_loss: 0.098
+root        : INFO     va_acc: 0.561, va_loss: 0.637
+root        : INFO     iteration: 11200, train time: 21.318 s, validate time: 13.232 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.902, tr_loss: 0.372
+root        : INFO     va_acc: 0.567, va_loss: 0.943
+root        : INFO     iteration: 11300, train time: 21.662 s, validate time: 13.338 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.986, tr_loss: 0.085
+root        : INFO     va_acc: 0.574, va_loss: 0.586
+root        : INFO     iteration: 11400, train time: 24.622 s, validate time: 16.426 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.928, tr_loss: 0.263
+root        : INFO     va_acc: 0.563, va_loss: 0.872
+root        : INFO     iteration: 11500, train time: 22.252 s, validate time: 13.866 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.951, tr_loss: 0.210
+root        : INFO     va_acc: 0.580, va_loss: 0.759
+root        : INFO     iteration: 11600, train time: 23.325 s, validate time: 13.732 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.994, tr_loss: 0.038
+root        : INFO     va_acc: 0.554, va_loss: 0.567
+root        : INFO     iteration: 11700, train time: 23.605 s, validate time: 13.052 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.975, tr_loss: 0.109
+root        : INFO     va_acc: 0.539, va_loss: 0.634
+root        : INFO     iteration: 11800, train time: 22.153 s, validate time: 13.542 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.986, tr_loss: 0.091
+root        : INFO     va_acc: 0.551, va_loss: 0.587
+root        : INFO     iteration: 11900, train time: 24.051 s, validate time: 13.206 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.983, tr_loss: 0.086
+root        : INFO     va_acc: 0.591, va_loss: 0.609
+root        : INFO     iteration: 12000, train time: 23.768 s, validate time: 13.061 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_12000_iters.tar
+root        : INFO     tr_acc: 0.998, tr_loss: 0.039
+root        : INFO     va_acc: 0.560, va_loss: 0.586
+root        : INFO     iteration: 12100, train time: 22.859 s, validate time: 11.813 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.996, tr_loss: 0.043
+root        : INFO     va_acc: 0.598, va_loss: 0.582
+root        : INFO     iteration: 12200, train time: 21.508 s, validate time: 11.161 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.989, tr_loss: 0.084
+root        : INFO     va_acc: 0.585, va_loss: 0.638
+root        : INFO     iteration: 12300, train time: 23.707 s, validate time: 16.535 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.993, tr_loss: 0.057
+root        : INFO     va_acc: 0.563, va_loss: 0.621
+root        : INFO     iteration: 12400, train time: 22.013 s, validate time: 13.489 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.996, tr_loss: 0.043
+root        : INFO     va_acc: 0.562, va_loss: 0.611
+root        : INFO     iteration: 12500, train time: 23.619 s, validate time: 13.108 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.977, tr_loss: 0.133
+root        : INFO     va_acc: 0.551, va_loss: 0.751
+root        : INFO     iteration: 12600, train time: 24.520 s, validate time: 14.144 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.995, tr_loss: 0.059
+root        : INFO     va_acc: 0.513, va_loss: 0.605
+root        : INFO     iteration: 12700, train time: 22.279 s, validate time: 12.719 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.990, tr_loss: 0.064
+root        : INFO     va_acc: 0.597, va_loss: 0.609
+root        : INFO     iteration: 12800, train time: 24.062 s, validate time: 13.138 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.998, tr_loss: 0.033
+root        : INFO     va_acc: 0.545, va_loss: 0.626
+root        : INFO     iteration: 12900, train time: 22.074 s, validate time: 12.979 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.998, tr_loss: 0.028
+root        : INFO     va_acc: 0.590, va_loss: 0.589
+root        : INFO     iteration: 13000, train time: 23.497 s, validate time: 12.688 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_13000_iters.tar
+root        : INFO     tr_acc: 0.994, tr_loss: 0.041
+root        : INFO     va_acc: 0.550, va_loss: 0.561
+root        : INFO     iteration: 13100, train time: 23.400 s, validate time: 13.240 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.993, tr_loss: 0.060
+root        : INFO     va_acc: 0.578, va_loss: 0.601
+root        : INFO     iteration: 13200, train time: 22.883 s, validate time: 12.267 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.994, tr_loss: 0.027
+root        : INFO     va_acc: 0.539, va_loss: 0.606
+root        : INFO     iteration: 13300, train time: 23.199 s, validate time: 12.026 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.999, tr_loss: 0.018
+root        : INFO     va_acc: 0.563, va_loss: 0.622
+root        : INFO     iteration: 13400, train time: 22.473 s, validate time: 12.017 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.997, tr_loss: 0.033
+root        : INFO     va_acc: 0.544, va_loss: 0.640
+root        : INFO     iteration: 13500, train time: 21.559 s, validate time: 11.590 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.998, tr_loss: 0.029
+root        : INFO     va_acc: 0.538, va_loss: 0.642
+root        : INFO     iteration: 13600, train time: 21.652 s, validate time: 12.219 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.999, tr_loss: 0.013
+root        : INFO     va_acc: 0.565, va_loss: 0.651
+root        : INFO     iteration: 13700, train time: 23.026 s, validate time: 11.860 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.987, tr_loss: 0.069
+root        : INFO     va_acc: 0.592, va_loss: 0.682
+root        : INFO     iteration: 13800, train time: 21.074 s, validate time: 12.059 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.996, tr_loss: 0.036
+root        : INFO     va_acc: 0.552, va_loss: 0.606
+root        : INFO     iteration: 13900, train time: 20.648 s, validate time: 12.400 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.986, tr_loss: 0.084
+root        : INFO     va_acc: 0.602, va_loss: 0.711
+root        : INFO     iteration: 14000, train time: 20.628 s, validate time: 11.254 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_14000_iters.tar
+root        : INFO     tr_acc: 1.000, tr_loss: 0.018
+root        : INFO     va_acc: 0.559, va_loss: 0.620
+root        : INFO     iteration: 14100, train time: 23.901 s, validate time: 11.632 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.960, tr_loss: 0.166
+root        : INFO     va_acc: 0.586, va_loss: 0.758
+root        : INFO     iteration: 14200, train time: 21.282 s, validate time: 11.555 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.992, tr_loss: 0.054
+root        : INFO     va_acc: 0.557, va_loss: 0.676
+root        : INFO     iteration: 14300, train time: 20.708 s, validate time: 12.370 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 1.000, tr_loss: 0.014
+root        : INFO     va_acc: 0.559, va_loss: 0.610
+root        : INFO     iteration: 14400, train time: 20.990 s, validate time: 12.240 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.989, tr_loss: 0.059
+root        : INFO     va_acc: 0.599, va_loss: 0.633
+root        : INFO     iteration: 14500, train time: 20.791 s, validate time: 13.029 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.998, tr_loss: 0.032
+root        : INFO     va_acc: 0.552, va_loss: 0.636
+root        : INFO     iteration: 14600, train time: 21.836 s, validate time: 12.751 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.985, tr_loss: 0.077
+root        : INFO     va_acc: 0.597, va_loss: 0.684
+root        : INFO     iteration: 14700, train time: 22.278 s, validate time: 13.072 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.998, tr_loss: 0.023
+root        : INFO     va_acc: 0.575, va_loss: 0.600
+root        : INFO     iteration: 14800, train time: 23.496 s, validate time: 13.086 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.994, tr_loss: 0.037
+root        : INFO     va_acc: 0.568, va_loss: 0.664
+root        : INFO     iteration: 14900, train time: 21.137 s, validate time: 13.287 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.996, tr_loss: 0.027
+root        : INFO     va_acc: 0.592, va_loss: 0.665
+root        : INFO     iteration: 15000, train time: 23.509 s, validate time: 11.788 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/baseline_cnn/models/models_dev/md_15000_iters.tar
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=15000, mode='inference_validation_data', subdir='models_dev', validate=True, workspace='../../experiment_workspace/baseline_cnn/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+root        : INFO     Label                         Accuracy
+root        : INFO     ------------------------------------------------
+root        : INFO     0                             0.8788
+root        : INFO     1                             0.3056
+root        : INFO     ------------------------------------------------
+root        : INFO     Average                       0.5922
+root        : INFO     ------------------------------------------------
+root        : INFO     AUC:                          0.6596
+root        : INFO     ------------------------------------------------
+root        : INFO     ------------------------------------------------
+root        : INFO     AUC:                          0.6597
+root        : INFO     ------------------------------------------------
+root        : INFO     Confusion matrix:
+param number:
+15905346
+Traceback (most recent call last):
+  File "main_pytorch.py", line 344, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 294, in inference_validation_data
+    print_confusion_matrix(confusion_matrix, labels)
+  File "/dstore/home/tzhou/MT-3/main/../utils/utilities.py", line 239, in print_confusion_matrix
+    logging.info('{}'.format('\t'.join(labels)))
+TypeError: sequence item 0: expected str instance, int found

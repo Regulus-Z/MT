@@ -1,0 +1,60 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=12000, mode='train', subdir='models_dev', validate=True, workspace='../../experiment_workspace/MT-3/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+Traceback (most recent call last):
+  File "main_pytorch.py", line 342, in <module>
+    train(args)
+  File "main_pytorch.py", line 172, in train
+    cuda=cuda)
+  File "main_pytorch.py", line 48, in evaluate
+    cuda=cuda)
+  File "main_pytorch.py", line 99, in forward
+    batch_output = model(batch_x,batch_ch,batch_3)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 282, in forward
+    x2 = self.cnn_encoder_2(x2)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 352, in forward
+    x = self.conv1(x, pool_size=(2, 2), pool_type='avg')
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 78, in forward
+    x = F.relu_(self.bn1(self.conv1(x)))
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 399, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 396, in _conv_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 40.00 MiB (GPU 0; 10.92 GiB total capacity; 3.05 GiB already allocated; 46.44 MiB free; 3.12 GiB reserved in total by PyTorch)
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=12000, mode='inference_validation_data', subdir='models_dev', validate=True, workspace='../../experiment_workspace/MT-3/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+param number:
+15117378
+Traceback (most recent call last):
+  File "main_pytorch.py", line 345, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 275, in inference_validation_data
+    cuda=cuda)
+  File "main_pytorch.py", line 99, in forward
+    batch_output = model(batch_x,batch_ch,batch_3)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 271, in forward
+    x1 = self.cnn_encoder(x1)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 356, in forward
+    x = self.conv3(x, pool_size=(2, 2), pool_type='max')
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 80, in forward
+    x = F.relu_(self.bn2(self.conv2(x)))
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 399, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 396, in _conv_forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 30.00 MiB (GPU 0; 10.92 GiB total capacity; 3.08 GiB already allocated; 20.44 MiB free; 3.14 GiB reserved in total by PyTorch)

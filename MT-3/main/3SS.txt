@@ -1,0 +1,45 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset1/', filename='main_pytorch', iteration_max=12000, mode='train', subdir='models_dev', validate=True, workspace='../../experiment_workspace/MT-33/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+Traceback (most recent call last):
+  File "main_pytorch.py", line 360, in <module>
+    train(args)
+  File "main_pytorch.py", line 175, in train
+    cuda=cuda)
+  File "main_pytorch.py", line 51, in evaluate
+    cuda=cuda)
+  File "main_pytorch.py", line 102, in forward
+    batch_output = model(batch_x,batch_ch,batch_3)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 282, in forward
+    x2 = self.cnn_encoder_2(x2)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 352, in forward
+    x = self.conv1(x, pool_size=(2, 2), pool_type='avg')
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/MT-3/main/models_pytorch.py", line 80, in forward
+    x = F.relu_(self.bn2(self.conv2(x)))
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 140, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 2147, in batch_norm
+    input, weight, bias, running_mean, running_var, training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 102.00 MiB (GPU 0; 10.92 GiB total capacity; 3.88 GiB already allocated; 89.44 MiB free; 3.96 GiB reserved in total by PyTorch)
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset1/', filename='main_pytorch', iteration_max=12000, mode='inference_validation_data', subdir='models_dev', validate=True, workspace='../../experiment_workspace/MT-33/')
+param number:
+15905346
+Traceback (most recent call last):
+  File "main_pytorch.py", line 363, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 260, in inference_validation_data
+    checkpoint = torch.load(model_path)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 579, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '../../experiment_workspace/MT-33/models/models_dev/md_12000_iters.tar'

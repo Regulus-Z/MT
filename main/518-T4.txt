@@ -1,0 +1,43 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset1/', filename='main_pytorch', iteration_max=50000, mode='train', subdir='models_test', validate=False, workspace='../../experiment_workspace/Conformer-SS/')
+root        : INFO     The data contains: 1000 training and 340 validation data.
+Traceback (most recent call last):
+  File "main_pytorch.py", line 342, in <module>
+    train(args)
+  File "main_pytorch.py", line 172, in train
+    cuda=cuda)
+  File "main_pytorch.py", line 48, in evaluate
+    cuda=cuda)
+  File "main_pytorch.py", line 99, in forward
+    batch_output = model(batch_x,batch_ch,batch_3)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/Conformer-S/main/models_pytorch.py", line 368, in forward
+    x2 = self.cnn_encoder2(x2)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/Conformer-S/main/models_pytorch.py", line 456, in forward
+    x = self.conv1(x, pool_size=(2, 2), pool_type='max')
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/dstore/home/tzhou/Conformer-S/main/models_pytorch.py", line 86, in forward
+    x = F.max_pool2d(x, kernel_size=pool_size)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/_jit_internal.py", line 365, in fn
+    return if_false(*args, **kwargs)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 659, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+RuntimeError: CUDA out of memory. Tried to allocate 52.00 MiB (GPU 0; 10.92 GiB total capacity; 3.05 GiB already allocated; 13.44 MiB free; 3.07 GiB reserved in total by PyTorch)
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset1/', filename='main_pytorch', iteration_max=50000, mode='inference_validation_data', subdir='models_test', validate=False, workspace='../../experiment_workspace/Conformer-SS/')
+param number:
+72655682
+Traceback (most recent call last):
+  File "main_pytorch.py", line 345, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 256, in inference_validation_data
+    checkpoint = torch.load(model_path)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 579, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '../../experiment_workspace/Conformer-SS/models/models_test/md_50000_iters.tar'

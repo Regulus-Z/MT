@@ -1,0 +1,37 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=45000, mode='train', subdir='models_test', validate=False, workspace='../../experiment_workspace/Conformer-00/')
+root        : INFO     The data contains: 1000 training and 340 validation data.
+Traceback (most recent call last):
+  File "main_pytorch.py", line 342, in <module>
+    train(args)
+  File "main_pytorch.py", line 163, in train
+    for (iteration, (batch_x,batch_ch,batch_3,batch_y, _)) in enumerate(generator.generate_train()):
+  File "/dstore/home/tzhou/Conformer-0/main/../utils/data_generator.py", line 173, in generate_train
+    batch_x,batch_ch,batch_3,batch_audio_names = self.read_batch_audio(batch_audio_indexes, 'train', 'ge_train')
+  File "/dstore/home/tzhou/Conformer-0/main/../utils/data_generator.py", line 87, in read_batch_audio
+    audio, fs = read_audio(os.path.join(self.dataset_dir,'deep-breath', 'audio', audio_name))
+  File "/dstore/home/tzhou/Conformer-0/main/../utils/utilities.py", line 53, in read_audio
+    (audio, fs) = soundfile.read(path+".wav")
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/soundfile.py", line 257, in read
+    subtype, endian, format, closefd) as f:
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/soundfile.py", line 629, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/soundfile.py", line 1184, in _open
+    "Error opening {0!r}: ".format(self.name))
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/soundfile.py", line 1357, in _error_check
+    raise RuntimeError(prefix + _ffi.string(err_str).decode('utf-8', 'replace'))
+RuntimeError: Error opening '../../dataset/deep-breath/audio/4pzyamXuTgfmgVGi39RXWSfNb213.wav': System error.
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=45000, mode='inference_validation_data', subdir='models_test', validate=False, workspace='../../experiment_workspace/Conformer-00/')
+param number:
+4943810
+Traceback (most recent call last):
+  File "main_pytorch.py", line 345, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 256, in inference_validation_data
+    checkpoint = torch.load(model_path)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 579, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '../../experiment_workspace/Conformer-00/models/models_test/md_45000_iters.tar'

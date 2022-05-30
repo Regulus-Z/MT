@@ -1,0 +1,49 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=40000, mode='train', subdir='models_dev', validate=True, workspace='../../experiment_workspace/Conformer-1/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+root        : INFO     tr_acc: 0.500, tr_loss: 1.716,auc:0.490
+root        : INFO     va_acc: 0.500, va_loss: 1.706,auc:0.508
+root        : INFO     iteration: 0, train time: 0.028 s, validate time: 10.480 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 100, train time: 20.671 s, validate time: 10.152 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 200, train time: 20.457 s, validate time: 10.213 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 300, train time: 20.250 s, validate time: 10.261 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 400, train time: 20.450 s, validate time: 10.237 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 500, train time: 20.280 s, validate time: 10.351 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: nan,auc:0.000
+root        : INFO     va_acc: 0.500, va_loss: nan,auc:0.000
+root        : INFO     iteration: 600, train time: 20.572 s, validate time: 10.242 s
+root        : INFO     ------------------------------------
+Killed
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=40000, mode='inference_validation_data', subdir='models_dev', validate=True, workspace='../../experiment_workspace/Conformer-1/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+param number:
+70939202
+Traceback (most recent call last):
+  File "main_pytorch.py", line 345, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 286, in inference_validation_data
+    auc=calculate_auc(targets, scores, classes_num)
+  File "/dstore/home/tzhou/Conformer-1/main/../utils/utilities.py", line 141, in calculate_auc
+    return roc_auc_score(Y_test,Y_pred)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/sklearn/metrics/_ranking.py", line 546, in roc_auc_score
+    y_score = check_array(y_score, ensure_2d=False)
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/home/tzhou/miniconda3/envs/py37/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').

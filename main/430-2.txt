@@ -1,0 +1,1881 @@
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=45000, mode='train', subdir='models_dev', validate=True, workspace='../../experiment_workspace/Conformer-00/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+root        : INFO     tr_acc: 0.500, tr_loss: 1.153,auc:0.475
+root        : INFO     va_acc: 0.500, va_loss: 1.138,auc:0.503
+root        : INFO     iteration: 0, train time: 0.060 s, validate time: 19.568 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 1.873,auc:0.525
+root        : INFO     va_acc: 0.500, va_loss: 1.856,auc:0.520
+root        : INFO     iteration: 100, train time: 21.074 s, validate time: 10.855 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 1.355,auc:0.532
+root        : INFO     va_acc: 0.500, va_loss: 1.344,auc:0.576
+root        : INFO     iteration: 200, train time: 19.895 s, validate time: 10.957 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.572,auc:0.592
+root        : INFO     va_acc: 0.500, va_loss: 0.575,auc:0.657
+root        : INFO     iteration: 300, train time: 21.162 s, validate time: 11.137 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.719,auc:0.605
+root        : INFO     va_acc: 0.500, va_loss: 0.718,auc:0.556
+root        : INFO     iteration: 400, train time: 19.958 s, validate time: 10.961 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.579,auc:0.606
+root        : INFO     va_acc: 0.500, va_loss: 0.582,auc:0.575
+root        : INFO     iteration: 500, train time: 20.286 s, validate time: 10.366 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.618,auc:0.557
+root        : INFO     va_acc: 0.500, va_loss: 0.619,auc:0.537
+root        : INFO     iteration: 600, train time: 19.073 s, validate time: 10.325 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.762,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.761,auc:0.500
+root        : INFO     iteration: 700, train time: 17.756 s, validate time: 10.445 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.724,auc:0.579
+root        : INFO     va_acc: 0.500, va_loss: 0.724,auc:0.504
+root        : INFO     iteration: 800, train time: 17.935 s, validate time: 10.109 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.904,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.900,auc:0.500
+root        : INFO     iteration: 900, train time: 19.055 s, validate time: 10.846 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.987,auc:0.494
+root        : INFO     va_acc: 0.500, va_loss: 0.982,auc:0.498
+root        : INFO     iteration: 1000, train time: 18.404 s, validate time: 10.495 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_1000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.919,auc:0.508
+root        : INFO     va_acc: 0.500, va_loss: 0.915,auc:0.520
+root        : INFO     iteration: 1100, train time: 22.195 s, validate time: 9.900 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.784,auc:0.500
+root        : INFO     iteration: 1200, train time: 20.714 s, validate time: 10.218 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.812,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.809,auc:0.500
+root        : INFO     iteration: 1300, train time: 17.319 s, validate time: 9.596 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.822,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.819,auc:0.500
+root        : INFO     iteration: 1400, train time: 19.927 s, validate time: 10.088 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.763,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.762,auc:0.500
+root        : INFO     iteration: 1500, train time: 19.957 s, validate time: 9.708 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.816,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.813,auc:0.500
+root        : INFO     iteration: 1600, train time: 19.873 s, validate time: 10.756 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.769,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.767,auc:0.500
+root        : INFO     iteration: 1700, train time: 21.110 s, validate time: 10.592 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.751,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.749,auc:0.500
+root        : INFO     iteration: 1800, train time: 18.267 s, validate time: 10.863 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.771,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.500
+root        : INFO     iteration: 1900, train time: 21.287 s, validate time: 12.137 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.759,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.758,auc:0.500
+root        : INFO     iteration: 2000, train time: 19.662 s, validate time: 10.560 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_2000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.766,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.764,auc:0.500
+root        : INFO     iteration: 2100, train time: 24.443 s, validate time: 11.613 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.724,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.724,auc:0.500
+root        : INFO     iteration: 2200, train time: 19.131 s, validate time: 11.391 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.756,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.754,auc:0.500
+root        : INFO     iteration: 2300, train time: 20.896 s, validate time: 11.213 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.769,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.767,auc:0.500
+root        : INFO     iteration: 2400, train time: 19.227 s, validate time: 10.845 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.746,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.745,auc:0.500
+root        : INFO     iteration: 2500, train time: 19.838 s, validate time: 9.918 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.745,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.744,auc:0.500
+root        : INFO     iteration: 2600, train time: 20.021 s, validate time: 10.493 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.788,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.786,auc:0.500
+root        : INFO     iteration: 2700, train time: 20.868 s, validate time: 10.085 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.775,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.774,auc:0.500
+root        : INFO     iteration: 2800, train time: 20.996 s, validate time: 10.078 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.755,auc:0.506
+root        : INFO     va_acc: 0.500, va_loss: 0.754,auc:0.494
+root        : INFO     iteration: 2900, train time: 20.712 s, validate time: 11.370 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.770,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.500
+root        : INFO     iteration: 3000, train time: 17.839 s, validate time: 10.575 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_3000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.787,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.785,auc:0.500
+root        : INFO     iteration: 3100, train time: 22.129 s, validate time: 10.355 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.767,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.765,auc:0.500
+root        : INFO     iteration: 3200, train time: 20.394 s, validate time: 10.438 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.763,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.762,auc:0.500
+root        : INFO     iteration: 3300, train time: 19.806 s, validate time: 9.942 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.746,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.745,auc:0.500
+root        : INFO     iteration: 3400, train time: 20.740 s, validate time: 10.223 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.833,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.830,auc:0.500
+root        : INFO     iteration: 3500, train time: 19.622 s, validate time: 10.806 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.788,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.787,auc:0.500
+root        : INFO     iteration: 3600, train time: 18.930 s, validate time: 10.889 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.757,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.756,auc:0.500
+root        : INFO     iteration: 3700, train time: 20.919 s, validate time: 10.235 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.779,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.777,auc:0.500
+root        : INFO     iteration: 3800, train time: 20.677 s, validate time: 10.460 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.739,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.738,auc:0.500
+root        : INFO     iteration: 3900, train time: 20.129 s, validate time: 9.762 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.809,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.807,auc:0.500
+root        : INFO     iteration: 4000, train time: 20.197 s, validate time: 9.321 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_4000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.816,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.814,auc:0.500
+root        : INFO     iteration: 4100, train time: 22.920 s, validate time: 9.580 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.779,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.777,auc:0.500
+root        : INFO     iteration: 4200, train time: 18.202 s, validate time: 9.194 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.749,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.747,auc:0.500
+root        : INFO     iteration: 4300, train time: 19.183 s, validate time: 9.914 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.759,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.758,auc:0.500
+root        : INFO     iteration: 4400, train time: 18.479 s, validate time: 10.521 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.779,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.778,auc:0.500
+root        : INFO     iteration: 4500, train time: 18.401 s, validate time: 10.020 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.856,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.853,auc:0.500
+root        : INFO     iteration: 4600, train time: 20.277 s, validate time: 9.847 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 1.052,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 1.045,auc:0.500
+root        : INFO     iteration: 4700, train time: 17.818 s, validate time: 9.461 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.907,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.903,auc:0.500
+root        : INFO     iteration: 4800, train time: 18.995 s, validate time: 9.780 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.826,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.823,auc:0.500
+root        : INFO     iteration: 4900, train time: 22.121 s, validate time: 10.347 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.743,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.741,auc:0.500
+root        : INFO     iteration: 5000, train time: 21.812 s, validate time: 10.724 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_5000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.835,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.832,auc:0.500
+root        : INFO     iteration: 5100, train time: 20.928 s, validate time: 11.079 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.791,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.789,auc:0.500
+root        : INFO     iteration: 5200, train time: 18.178 s, validate time: 10.121 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.770,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.768,auc:0.500
+root        : INFO     iteration: 5300, train time: 19.958 s, validate time: 10.530 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.763,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.762,auc:0.500
+root        : INFO     iteration: 5400, train time: 20.248 s, validate time: 9.942 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.758,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.757,auc:0.500
+root        : INFO     iteration: 5500, train time: 19.279 s, validate time: 10.586 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.776,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.774,auc:0.500
+root        : INFO     iteration: 5600, train time: 18.634 s, validate time: 9.016 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.771,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.770,auc:0.500
+root        : INFO     iteration: 5700, train time: 18.228 s, validate time: 9.742 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.904,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.899,auc:0.500
+root        : INFO     iteration: 5800, train time: 19.897 s, validate time: 9.899 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.812,auc:0.500
+root        : INFO     iteration: 5900, train time: 17.765 s, validate time: 9.853 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.751,auc:0.502
+root        : INFO     va_acc: 0.500, va_loss: 0.749,auc:0.503
+root        : INFO     iteration: 6000, train time: 18.317 s, validate time: 9.731 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_6000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.794,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.792,auc:0.500
+root        : INFO     iteration: 6100, train time: 21.908 s, validate time: 9.333 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.838,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.835,auc:0.500
+root        : INFO     iteration: 6200, train time: 18.854 s, validate time: 10.298 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.803,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.801,auc:0.500
+root        : INFO     iteration: 6300, train time: 21.446 s, validate time: 10.235 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.793,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.791,auc:0.500
+root        : INFO     iteration: 6400, train time: 18.826 s, validate time: 9.289 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.775,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.773,auc:0.500
+root        : INFO     iteration: 6500, train time: 19.076 s, validate time: 10.386 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.778,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.776,auc:0.500
+root        : INFO     iteration: 6600, train time: 17.394 s, validate time: 9.434 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.781,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.779,auc:0.500
+root        : INFO     iteration: 6700, train time: 18.922 s, validate time: 8.968 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.799,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.797,auc:0.500
+root        : INFO     iteration: 6800, train time: 17.901 s, validate time: 9.269 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.791,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.789,auc:0.500
+root        : INFO     iteration: 6900, train time: 19.356 s, validate time: 9.358 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.790,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.788,auc:0.500
+root        : INFO     iteration: 7000, train time: 17.623 s, validate time: 9.301 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_7000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.774,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.773,auc:0.500
+root        : INFO     iteration: 7100, train time: 23.517 s, validate time: 9.504 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.784,auc:0.500
+root        : INFO     iteration: 7200, train time: 18.120 s, validate time: 10.391 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.815,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.813,auc:0.500
+root        : INFO     iteration: 7300, train time: 19.491 s, validate time: 10.623 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.805,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.803,auc:0.500
+root        : INFO     iteration: 7400, train time: 18.629 s, validate time: 9.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.805,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.802,auc:0.500
+root        : INFO     iteration: 7500, train time: 20.000 s, validate time: 11.596 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.816,auc:0.502
+root        : INFO     va_acc: 0.500, va_loss: 0.813,auc:0.500
+root        : INFO     iteration: 7600, train time: 20.641 s, validate time: 11.348 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.804,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.802,auc:0.500
+root        : INFO     iteration: 7700, train time: 19.738 s, validate time: 12.671 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.818,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.816,auc:0.500
+root        : INFO     iteration: 7800, train time: 20.606 s, validate time: 13.338 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.822,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.819,auc:0.500
+root        : INFO     iteration: 7900, train time: 20.200 s, validate time: 12.300 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.840,auc:0.530
+root        : INFO     va_acc: 0.500, va_loss: 0.838,auc:0.537
+root        : INFO     iteration: 8000, train time: 20.892 s, validate time: 12.515 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_8000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.812,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.810,auc:0.500
+root        : INFO     iteration: 8100, train time: 25.728 s, validate time: 11.915 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.801,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.799,auc:0.500
+root        : INFO     iteration: 8200, train time: 21.534 s, validate time: 11.278 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.799,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.797,auc:0.500
+root        : INFO     iteration: 8300, train time: 20.614 s, validate time: 11.179 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.787,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.785,auc:0.500
+root        : INFO     iteration: 8400, train time: 20.977 s, validate time: 11.865 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.784,auc:0.500
+root        : INFO     iteration: 8500, train time: 20.383 s, validate time: 11.720 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.783,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.781,auc:0.500
+root        : INFO     iteration: 8600, train time: 20.567 s, validate time: 12.116 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.784,auc:0.500
+root        : INFO     iteration: 8700, train time: 20.286 s, validate time: 11.587 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.818,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.816,auc:0.500
+root        : INFO     iteration: 8800, train time: 20.999 s, validate time: 11.301 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.800,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.798,auc:0.500
+root        : INFO     iteration: 8900, train time: 19.868 s, validate time: 10.062 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.809,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.806,auc:0.500
+root        : INFO     iteration: 9000, train time: 20.936 s, validate time: 13.369 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_9000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.813,auc:0.519
+root        : INFO     va_acc: 0.500, va_loss: 0.810,auc:0.533
+root        : INFO     iteration: 9100, train time: 24.606 s, validate time: 11.742 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.500
+root        : INFO     iteration: 9200, train time: 21.237 s, validate time: 12.194 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.797,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.795,auc:0.500
+root        : INFO     iteration: 9300, train time: 20.506 s, validate time: 11.039 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.804,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.802,auc:0.500
+root        : INFO     iteration: 9400, train time: 19.753 s, validate time: 11.364 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.796,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.794,auc:0.500
+root        : INFO     iteration: 9500, train time: 18.748 s, validate time: 10.906 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.792,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.790,auc:0.500
+root        : INFO     iteration: 9600, train time: 20.583 s, validate time: 11.670 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.788,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.786,auc:0.500
+root        : INFO     iteration: 9700, train time: 20.090 s, validate time: 11.379 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.780,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.779,auc:0.500
+root        : INFO     iteration: 9800, train time: 20.267 s, validate time: 10.566 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.804,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.801,auc:0.500
+root        : INFO     iteration: 9900, train time: 20.418 s, validate time: 11.125 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.821,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.818,auc:0.500
+root        : INFO     iteration: 10000, train time: 21.100 s, validate time: 11.976 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_10000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.830,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.827,auc:0.500
+root        : INFO     iteration: 10100, train time: 23.415 s, validate time: 10.595 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.836,auc:0.502
+root        : INFO     va_acc: 0.500, va_loss: 0.833,auc:0.500
+root        : INFO     iteration: 10200, train time: 20.279 s, validate time: 11.124 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.820,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.818,auc:0.500
+root        : INFO     iteration: 10300, train time: 21.557 s, validate time: 11.151 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.812,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.810,auc:0.500
+root        : INFO     iteration: 10400, train time: 18.679 s, validate time: 11.305 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.810,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.808,auc:0.500
+root        : INFO     iteration: 10500, train time: 19.521 s, validate time: 11.756 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.822,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.820,auc:0.500
+root        : INFO     iteration: 10600, train time: 18.810 s, validate time: 10.470 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.830,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.828,auc:0.500
+root        : INFO     iteration: 10700, train time: 19.456 s, validate time: 12.279 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.819,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.817,auc:0.500
+root        : INFO     iteration: 10800, train time: 19.336 s, validate time: 11.955 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.811,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.808,auc:0.500
+root        : INFO     iteration: 10900, train time: 20.014 s, validate time: 10.132 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.500
+root        : INFO     iteration: 11000, train time: 18.076 s, validate time: 10.328 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_11000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.500
+root        : INFO     iteration: 11100, train time: 24.649 s, validate time: 13.808 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.801,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.798,auc:0.500
+root        : INFO     iteration: 11200, train time: 21.766 s, validate time: 13.075 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.500
+root        : INFO     iteration: 11300, train time: 22.360 s, validate time: 11.040 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.687,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.687,auc:0.500
+root        : INFO     iteration: 11400, train time: 19.246 s, validate time: 10.476 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.980,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.975,auc:0.500
+root        : INFO     iteration: 11500, train time: 19.714 s, validate time: 12.278 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.781,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.779,auc:0.500
+root        : INFO     iteration: 11600, train time: 21.061 s, validate time: 10.260 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.704,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.704,auc:0.500
+root        : INFO     iteration: 11700, train time: 18.895 s, validate time: 9.105 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.802,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.800,auc:0.500
+root        : INFO     iteration: 11800, train time: 19.187 s, validate time: 9.848 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.794,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.792,auc:0.500
+root        : INFO     iteration: 11900, train time: 18.533 s, validate time: 9.552 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.780,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.779,auc:0.500
+root        : INFO     iteration: 12000, train time: 20.903 s, validate time: 10.933 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_12000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.782,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.780,auc:0.500
+root        : INFO     iteration: 12100, train time: 21.462 s, validate time: 10.747 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.767,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.766,auc:0.500
+root        : INFO     iteration: 12200, train time: 20.135 s, validate time: 9.503 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.770,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.500
+root        : INFO     iteration: 12300, train time: 18.124 s, validate time: 10.237 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.796,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.794,auc:0.500
+root        : INFO     iteration: 12400, train time: 20.211 s, validate time: 10.791 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.784,auc:0.500
+root        : INFO     iteration: 12500, train time: 21.433 s, validate time: 10.209 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.805,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.803,auc:0.500
+root        : INFO     iteration: 12600, train time: 17.710 s, validate time: 10.969 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.791,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.789,auc:0.500
+root        : INFO     iteration: 12700, train time: 20.111 s, validate time: 10.833 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.810,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.808,auc:0.500
+root        : INFO     iteration: 12800, train time: 19.762 s, validate time: 9.838 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.793,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.791,auc:0.500
+root        : INFO     iteration: 12900, train time: 17.963 s, validate time: 9.360 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.819,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.816,auc:0.500
+root        : INFO     iteration: 13000, train time: 18.797 s, validate time: 9.563 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_13000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.801,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.798,auc:0.500
+root        : INFO     iteration: 13100, train time: 24.491 s, validate time: 9.216 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.795,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.793,auc:0.500
+root        : INFO     iteration: 13200, train time: 20.434 s, validate time: 10.348 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.793,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.791,auc:0.500
+root        : INFO     iteration: 13300, train time: 18.810 s, validate time: 10.042 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.799,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.797,auc:0.500
+root        : INFO     iteration: 13400, train time: 18.472 s, validate time: 9.929 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.800,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.797,auc:0.500
+root        : INFO     iteration: 13500, train time: 19.287 s, validate time: 10.525 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.798,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.796,auc:0.500
+root        : INFO     iteration: 13600, train time: 19.483 s, validate time: 11.600 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.790,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.788,auc:0.500
+root        : INFO     iteration: 13700, train time: 20.861 s, validate time: 11.288 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.790,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.788,auc:0.500
+root        : INFO     iteration: 13800, train time: 21.154 s, validate time: 10.739 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.782,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.780,auc:0.500
+root        : INFO     iteration: 13900, train time: 18.369 s, validate time: 10.287 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.847,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.844,auc:0.500
+root        : INFO     iteration: 14000, train time: 20.453 s, validate time: 10.171 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_14000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.731,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.731,auc:0.500
+root        : INFO     iteration: 14100, train time: 23.062 s, validate time: 10.248 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.744,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.743,auc:0.500
+root        : INFO     iteration: 14200, train time: 20.189 s, validate time: 10.279 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.717,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.716,auc:0.500
+root        : INFO     iteration: 14300, train time: 21.348 s, validate time: 11.001 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.753,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.752,auc:0.500
+root        : INFO     iteration: 14400, train time: 21.251 s, validate time: 11.187 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.765,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.764,auc:0.500
+root        : INFO     iteration: 14500, train time: 19.981 s, validate time: 10.035 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.771,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.500
+root        : INFO     iteration: 14600, train time: 18.921 s, validate time: 10.369 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.778,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.777,auc:0.500
+root        : INFO     iteration: 14700, train time: 20.847 s, validate time: 10.832 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.792,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.790,auc:0.500
+root        : INFO     iteration: 14800, train time: 19.634 s, validate time: 10.696 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.700,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.700,auc:0.500
+root        : INFO     iteration: 14900, train time: 20.748 s, validate time: 10.674 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.643,auc:0.581
+root        : INFO     va_acc: 0.500, va_loss: 0.644,auc:0.554
+root        : INFO     iteration: 15000, train time: 18.544 s, validate time: 10.994 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_15000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.755,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.754,auc:0.500
+root        : INFO     iteration: 15100, train time: 24.299 s, validate time: 11.304 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.722,auc:0.562
+root        : INFO     va_acc: 0.500, va_loss: 0.721,auc:0.564
+root        : INFO     iteration: 15200, train time: 18.904 s, validate time: 9.664 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.813,auc:0.500
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.500
+root        : INFO     iteration: 15300, train time: 20.257 s, validate time: 10.272 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.780,auc:0.570
+root        : INFO     va_acc: 0.500, va_loss: 0.778,auc:0.574
+root        : INFO     iteration: 15400, train time: 19.862 s, validate time: 10.220 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.797,auc:0.598
+root        : INFO     va_acc: 0.500, va_loss: 0.795,auc:0.604
+root        : INFO     iteration: 15500, train time: 19.521 s, validate time: 10.629 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.783,auc:0.622
+root        : INFO     va_acc: 0.500, va_loss: 0.782,auc:0.688
+root        : INFO     iteration: 15600, train time: 20.864 s, validate time: 11.095 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.790,auc:0.646
+root        : INFO     va_acc: 0.500, va_loss: 0.788,auc:0.668
+root        : INFO     iteration: 15700, train time: 20.593 s, validate time: 10.177 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.784,auc:0.590
+root        : INFO     va_acc: 0.500, va_loss: 0.782,auc:0.638
+root        : INFO     iteration: 15800, train time: 20.198 s, validate time: 10.395 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.899,auc:0.632
+root        : INFO     va_acc: 0.500, va_loss: 0.912,auc:0.685
+root        : INFO     iteration: 15900, train time: 19.216 s, validate time: 9.854 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.495, tr_loss: 0.822,auc:0.542
+root        : INFO     va_acc: 0.502, va_loss: 0.819,auc:0.615
+root        : INFO     iteration: 16000, train time: 20.239 s, validate time: 10.173 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_16000_iters.tar
+root        : INFO     tr_acc: 0.490, tr_loss: 0.789,auc:0.605
+root        : INFO     va_acc: 0.504, va_loss: 0.776,auc:0.652
+root        : INFO     iteration: 16100, train time: 24.087 s, validate time: 10.543 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.581, tr_loss: 0.747,auc:0.620
+root        : INFO     va_acc: 0.605, va_loss: 0.756,auc:0.654
+root        : INFO     iteration: 16200, train time: 20.509 s, validate time: 11.764 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.761,auc:0.578
+root        : INFO     va_acc: 0.500, va_loss: 0.759,auc:0.640
+root        : INFO     iteration: 16300, train time: 18.364 s, validate time: 10.072 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.770,auc:0.579
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.642
+root        : INFO     iteration: 16400, train time: 20.817 s, validate time: 11.090 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.809,auc:0.576
+root        : INFO     va_acc: 0.500, va_loss: 0.807,auc:0.630
+root        : INFO     iteration: 16500, train time: 20.675 s, validate time: 12.289 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.813,auc:0.584
+root        : INFO     va_acc: 0.500, va_loss: 0.811,auc:0.618
+root        : INFO     iteration: 16600, train time: 19.120 s, validate time: 11.454 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.813,auc:0.587
+root        : INFO     va_acc: 0.500, va_loss: 0.810,auc:0.649
+root        : INFO     iteration: 16700, train time: 21.397 s, validate time: 11.259 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.940,auc:0.602
+root        : INFO     va_acc: 0.500, va_loss: 0.933,auc:0.678
+root        : INFO     iteration: 16800, train time: 20.345 s, validate time: 12.857 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.814,auc:0.657
+root        : INFO     va_acc: 0.500, va_loss: 0.812,auc:0.669
+root        : INFO     iteration: 16900, train time: 20.288 s, validate time: 11.176 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.932,auc:0.575
+root        : INFO     va_acc: 0.500, va_loss: 0.940,auc:0.504
+root        : INFO     iteration: 17000, train time: 21.581 s, validate time: 10.321 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_17000_iters.tar
+root        : INFO     tr_acc: 0.535, tr_loss: 0.679,auc:0.601
+root        : INFO     va_acc: 0.532, va_loss: 0.672,auc:0.615
+root        : INFO     iteration: 17100, train time: 23.493 s, validate time: 10.625 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.929,auc:0.510
+root        : INFO     va_acc: 0.500, va_loss: 0.933,auc:0.478
+root        : INFO     iteration: 17200, train time: 21.797 s, validate time: 12.400 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.838,auc:0.589
+root        : INFO     va_acc: 0.500, va_loss: 0.835,auc:0.650
+root        : INFO     iteration: 17300, train time: 20.695 s, validate time: 11.686 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.534, tr_loss: 0.716,auc:0.593
+root        : INFO     va_acc: 0.506, va_loss: 0.736,auc:0.515
+root        : INFO     iteration: 17400, train time: 21.832 s, validate time: 11.353 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.558, tr_loss: 0.705,auc:0.628
+root        : INFO     va_acc: 0.499, va_loss: 0.722,auc:0.535
+root        : INFO     iteration: 17500, train time: 21.332 s, validate time: 11.084 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.935,auc:0.569
+root        : INFO     va_acc: 0.500, va_loss: 0.914,auc:0.650
+root        : INFO     iteration: 17600, train time: 21.566 s, validate time: 10.462 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.521, tr_loss: 0.771,auc:0.590
+root        : INFO     va_acc: 0.535, va_loss: 0.774,auc:0.601
+root        : INFO     iteration: 17700, train time: 20.818 s, validate time: 11.821 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.503, tr_loss: 0.804,auc:0.573
+root        : INFO     va_acc: 0.500, va_loss: 0.790,auc:0.653
+root        : INFO     iteration: 17800, train time: 20.102 s, validate time: 11.848 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.760,auc:0.600
+root        : INFO     va_acc: 0.500, va_loss: 0.758,auc:0.693
+root        : INFO     iteration: 17900, train time: 20.905 s, validate time: 11.445 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.755,auc:0.604
+root        : INFO     va_acc: 0.500, va_loss: 0.751,auc:0.696
+root        : INFO     iteration: 18000, train time: 21.603 s, validate time: 12.205 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_18000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.746,auc:0.603
+root        : INFO     va_acc: 0.500, va_loss: 0.742,auc:0.696
+root        : INFO     iteration: 18100, train time: 23.984 s, validate time: 10.452 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.765,auc:0.606
+root        : INFO     va_acc: 0.500, va_loss: 0.760,auc:0.697
+root        : INFO     iteration: 18200, train time: 19.867 s, validate time: 9.351 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.773,auc:0.603
+root        : INFO     va_acc: 0.500, va_loss: 0.769,auc:0.697
+root        : INFO     iteration: 18300, train time: 17.972 s, validate time: 12.104 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.752,auc:0.608
+root        : INFO     va_acc: 0.500, va_loss: 0.749,auc:0.701
+root        : INFO     iteration: 18400, train time: 20.307 s, validate time: 10.367 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.736,auc:0.606
+root        : INFO     va_acc: 0.500, va_loss: 0.735,auc:0.699
+root        : INFO     iteration: 18500, train time: 18.620 s, validate time: 10.935 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.572, tr_loss: 0.717,auc:0.609
+root        : INFO     va_acc: 0.640, va_loss: 0.716,auc:0.702
+root        : INFO     iteration: 18600, train time: 17.463 s, validate time: 10.897 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.765,auc:0.615
+root        : INFO     va_acc: 0.500, va_loss: 0.765,auc:0.703
+root        : INFO     iteration: 18700, train time: 17.952 s, validate time: 11.056 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.836,auc:0.608
+root        : INFO     va_acc: 0.500, va_loss: 0.830,auc:0.702
+root        : INFO     iteration: 18800, train time: 21.584 s, validate time: 9.842 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.566, tr_loss: 0.734,auc:0.619
+root        : INFO     va_acc: 0.690, va_loss: 0.733,auc:0.706
+root        : INFO     iteration: 18900, train time: 19.034 s, validate time: 9.925 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.506, tr_loss: 0.779,auc:0.617
+root        : INFO     va_acc: 0.515, va_loss: 0.777,auc:0.703
+root        : INFO     iteration: 19000, train time: 18.495 s, validate time: 10.731 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_19000_iters.tar
+root        : INFO     tr_acc: 0.506, tr_loss: 0.798,auc:0.632
+root        : INFO     va_acc: 0.515, va_loss: 0.794,auc:0.707
+root        : INFO     iteration: 19100, train time: 20.328 s, validate time: 10.383 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.782,auc:0.632
+root        : INFO     va_acc: 0.500, va_loss: 0.780,auc:0.705
+root        : INFO     iteration: 19200, train time: 19.190 s, validate time: 11.331 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.501, tr_loss: 0.787,auc:0.643
+root        : INFO     va_acc: 0.494, va_loss: 0.784,auc:0.663
+root        : INFO     iteration: 19300, train time: 19.275 s, validate time: 11.732 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.510, tr_loss: 0.832,auc:0.642
+root        : INFO     va_acc: 0.494, va_loss: 0.838,auc:0.693
+root        : INFO     iteration: 19400, train time: 21.042 s, validate time: 11.530 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.517, tr_loss: 0.800,auc:0.579
+root        : INFO     va_acc: 0.645, va_loss: 0.786,auc:0.703
+root        : INFO     iteration: 19500, train time: 20.363 s, validate time: 10.293 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.540, tr_loss: 0.905,auc:0.614
+root        : INFO     va_acc: 0.617, va_loss: 0.891,auc:0.694
+root        : INFO     iteration: 19600, train time: 20.043 s, validate time: 11.016 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.786,auc:0.599
+root        : INFO     va_acc: 0.500, va_loss: 0.782,auc:0.696
+root        : INFO     iteration: 19700, train time: 18.309 s, validate time: 10.125 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 1.148,auc:0.607
+root        : INFO     va_acc: 0.500, va_loss: 1.130,auc:0.702
+root        : INFO     iteration: 19800, train time: 19.529 s, validate time: 11.632 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.845,auc:0.606
+root        : INFO     va_acc: 0.500, va_loss: 0.841,auc:0.699
+root        : INFO     iteration: 19900, train time: 20.786 s, validate time: 9.336 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.841,auc:0.611
+root        : INFO     va_acc: 0.500, va_loss: 0.841,auc:0.704
+root        : INFO     iteration: 20000, train time: 21.165 s, validate time: 10.028 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_20000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.915,auc:0.616
+root        : INFO     va_acc: 0.500, va_loss: 0.905,auc:0.704
+root        : INFO     iteration: 20100, train time: 22.575 s, validate time: 13.164 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.894,auc:0.610
+root        : INFO     va_acc: 0.500, va_loss: 0.887,auc:0.698
+root        : INFO     iteration: 20200, train time: 21.582 s, validate time: 12.641 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.867,auc:0.618
+root        : INFO     va_acc: 0.500, va_loss: 0.865,auc:0.704
+root        : INFO     iteration: 20300, train time: 18.348 s, validate time: 11.746 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.878,auc:0.624
+root        : INFO     va_acc: 0.500, va_loss: 0.875,auc:0.705
+root        : INFO     iteration: 20400, train time: 19.762 s, validate time: 10.840 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.911,auc:0.628
+root        : INFO     va_acc: 0.500, va_loss: 0.906,auc:0.700
+root        : INFO     iteration: 20500, train time: 20.285 s, validate time: 10.562 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.791,auc:0.634
+root        : INFO     va_acc: 0.500, va_loss: 0.795,auc:0.704
+root        : INFO     iteration: 20600, train time: 20.248 s, validate time: 10.178 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.604, tr_loss: 0.755,auc:0.650
+root        : INFO     va_acc: 0.665, va_loss: 0.763,auc:0.698
+root        : INFO     iteration: 20700, train time: 22.115 s, validate time: 10.676 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.633, tr_loss: 0.741,auc:0.660
+root        : INFO     va_acc: 0.693, va_loss: 0.753,auc:0.688
+root        : INFO     iteration: 20800, train time: 17.379 s, validate time: 10.990 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.538, tr_loss: 0.897,auc:0.693
+root        : INFO     va_acc: 0.504, va_loss: 0.931,auc:0.617
+root        : INFO     iteration: 20900, train time: 19.272 s, validate time: 9.757 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.598, tr_loss: 0.624,auc:0.712
+root        : INFO     va_acc: 0.560, va_loss: 0.635,auc:0.684
+root        : INFO     iteration: 21000, train time: 22.004 s, validate time: 10.749 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_21000_iters.tar
+root        : INFO     tr_acc: 0.650, tr_loss: 0.767,auc:0.717
+root        : INFO     va_acc: 0.599, va_loss: 0.817,auc:0.636
+root        : INFO     iteration: 21100, train time: 24.662 s, validate time: 10.731 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.701, tr_loss: 0.661,auc:0.742
+root        : INFO     va_acc: 0.639, va_loss: 0.708,auc:0.666
+root        : INFO     iteration: 21200, train time: 18.159 s, validate time: 10.507 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.767,auc:0.521
+root        : INFO     va_acc: 0.500, va_loss: 0.765,auc:0.414
+root        : INFO     iteration: 21300, train time: 19.080 s, validate time: 11.039 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.712,auc:0.579
+root        : INFO     va_acc: 0.500, va_loss: 0.711,auc:0.452
+root        : INFO     iteration: 21400, train time: 19.046 s, validate time: 10.939 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.864,auc:0.565
+root        : INFO     va_acc: 0.500, va_loss: 0.861,auc:0.449
+root        : INFO     iteration: 21500, train time: 19.253 s, validate time: 10.727 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.698,auc:0.686
+root        : INFO     va_acc: 0.500, va_loss: 0.698,auc:0.651
+root        : INFO     iteration: 21600, train time: 19.487 s, validate time: 10.851 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.811,auc:0.541
+root        : INFO     va_acc: 0.500, va_loss: 0.808,auc:0.645
+root        : INFO     iteration: 21700, train time: 18.083 s, validate time: 10.615 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.815,auc:0.598
+root        : INFO     va_acc: 0.500, va_loss: 0.813,auc:0.665
+root        : INFO     iteration: 21800, train time: 17.472 s, validate time: 10.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.648,auc:0.677
+root        : INFO     va_acc: 0.500, va_loss: 0.649,auc:0.674
+root        : INFO     iteration: 21900, train time: 19.802 s, validate time: 9.914 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.534, tr_loss: 0.690,auc:0.623
+root        : INFO     va_acc: 0.551, va_loss: 0.690,auc:0.701
+root        : INFO     iteration: 22000, train time: 19.783 s, validate time: 10.774 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_22000_iters.tar
+root        : INFO     tr_acc: 0.500, tr_loss: 0.809,auc:0.666
+root        : INFO     va_acc: 0.500, va_loss: 0.807,auc:0.706
+root        : INFO     iteration: 22100, train time: 21.700 s, validate time: 11.940 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 0.887,auc:0.686
+root        : INFO     va_acc: 0.500, va_loss: 0.887,auc:0.695
+root        : INFO     iteration: 22200, train time: 19.767 s, validate time: 10.537 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.500, tr_loss: 1.028,auc:0.714
+root        : INFO     va_acc: 0.500, va_loss: 1.091,auc:0.672
+root        : INFO     iteration: 22300, train time: 17.936 s, validate time: 10.189 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.660, tr_loss: 0.618,auc:0.723
+root        : INFO     va_acc: 0.642, va_loss: 0.644,auc:0.690
+root        : INFO     iteration: 22400, train time: 20.202 s, validate time: 10.677 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.604, tr_loss: 0.594,auc:0.729
+root        : INFO     va_acc: 0.565, va_loss: 0.613,auc:0.713
+root        : INFO     iteration: 22500, train time: 21.525 s, validate time: 10.324 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.680, tr_loss: 0.735,auc:0.724
+root        : INFO     va_acc: 0.645, va_loss: 0.753,auc:0.709
+root        : INFO     iteration: 22600, train time: 21.298 s, validate time: 10.619 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.681, tr_loss: 0.608,auc:0.737
+root        : INFO     va_acc: 0.622, va_loss: 0.637,auc:0.701
+root        : INFO     iteration: 22700, train time: 21.001 s, validate time: 10.457 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.608, tr_loss: 0.927,auc:0.743
+root        : INFO     va_acc: 0.577, va_loss: 0.976,auc:0.653
+root        : INFO     iteration: 22800, train time: 19.342 s, validate time: 11.218 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.688, tr_loss: 0.554,auc:0.746
+root        : INFO     va_acc: 0.629, va_loss: 0.593,auc:0.667
+root        : INFO     iteration: 22900, train time: 20.057 s, validate time: 10.494 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.716, tr_loss: 0.556,auc:0.761
+root        : INFO     va_acc: 0.670, va_loss: 0.637,auc:0.676
+root        : INFO     iteration: 23000, train time: 20.259 s, validate time: 11.636 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_23000_iters.tar
+root        : INFO     tr_acc: 0.704, tr_loss: 0.687,auc:0.769
+root        : INFO     va_acc: 0.660, va_loss: 0.759,auc:0.668
+root        : INFO     iteration: 23100, train time: 22.377 s, validate time: 10.385 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.689, tr_loss: 0.560,auc:0.770
+root        : INFO     va_acc: 0.645, va_loss: 0.639,auc:0.663
+root        : INFO     iteration: 23200, train time: 19.402 s, validate time: 11.020 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.711, tr_loss: 0.624,auc:0.763
+root        : INFO     va_acc: 0.667, va_loss: 0.683,auc:0.683
+root        : INFO     iteration: 23300, train time: 18.297 s, validate time: 9.639 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.718, tr_loss: 0.668,auc:0.768
+root        : INFO     va_acc: 0.643, va_loss: 0.744,auc:0.667
+root        : INFO     iteration: 23400, train time: 18.840 s, validate time: 10.829 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.718, tr_loss: 0.645,auc:0.758
+root        : INFO     va_acc: 0.660, va_loss: 0.692,auc:0.691
+root        : INFO     iteration: 23500, train time: 19.257 s, validate time: 11.897 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.705, tr_loss: 0.638,auc:0.766
+root        : INFO     va_acc: 0.673, va_loss: 0.675,auc:0.684
+root        : INFO     iteration: 23600, train time: 21.369 s, validate time: 11.213 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.696, tr_loss: 0.561,auc:0.775
+root        : INFO     va_acc: 0.651, va_loss: 0.626,auc:0.654
+root        : INFO     iteration: 23700, train time: 19.363 s, validate time: 10.009 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.726, tr_loss: 0.656,auc:0.781
+root        : INFO     va_acc: 0.662, va_loss: 0.727,auc:0.668
+root        : INFO     iteration: 23800, train time: 20.021 s, validate time: 10.000 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.711, tr_loss: 0.526,auc:0.783
+root        : INFO     va_acc: 0.649, va_loss: 0.592,auc:0.673
+root        : INFO     iteration: 23900, train time: 20.005 s, validate time: 9.321 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.719, tr_loss: 0.584,auc:0.790
+root        : INFO     va_acc: 0.645, va_loss: 0.657,auc:0.680
+root        : INFO     iteration: 24000, train time: 19.494 s, validate time: 12.389 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_24000_iters.tar
+root        : INFO     tr_acc: 0.723, tr_loss: 0.622,auc:0.781
+root        : INFO     va_acc: 0.662, va_loss: 0.681,auc:0.636
+root        : INFO     iteration: 24100, train time: 22.769 s, validate time: 11.466 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.718, tr_loss: 0.513,auc:0.794
+root        : INFO     va_acc: 0.646, va_loss: 0.581,auc:0.664
+root        : INFO     iteration: 24200, train time: 20.918 s, validate time: 10.793 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.719, tr_loss: 0.550,auc:0.792
+root        : INFO     va_acc: 0.669, va_loss: 0.629,auc:0.680
+root        : INFO     iteration: 24300, train time: 19.188 s, validate time: 11.469 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.707, tr_loss: 0.509,auc:0.792
+root        : INFO     va_acc: 0.664, va_loss: 0.591,auc:0.644
+root        : INFO     iteration: 24400, train time: 19.481 s, validate time: 10.952 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.722, tr_loss: 0.555,auc:0.780
+root        : INFO     va_acc: 0.614, va_loss: 0.659,auc:0.634
+root        : INFO     iteration: 24500, train time: 19.319 s, validate time: 10.957 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.737, tr_loss: 0.500,auc:0.801
+root        : INFO     va_acc: 0.645, va_loss: 0.573,auc:0.636
+root        : INFO     iteration: 24600, train time: 20.518 s, validate time: 9.989 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.744, tr_loss: 0.585,auc:0.802
+root        : INFO     va_acc: 0.669, va_loss: 0.667,auc:0.684
+root        : INFO     iteration: 24700, train time: 17.764 s, validate time: 11.248 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.679, tr_loss: 0.774,auc:0.798
+root        : INFO     va_acc: 0.598, va_loss: 0.859,auc:0.651
+root        : INFO     iteration: 24800, train time: 19.937 s, validate time: 10.388 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.750, tr_loss: 0.634,auc:0.802
+root        : INFO     va_acc: 0.654, va_loss: 0.720,auc:0.665
+root        : INFO     iteration: 24900, train time: 19.625 s, validate time: 11.498 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.713, tr_loss: 0.506,auc:0.796
+root        : INFO     va_acc: 0.663, va_loss: 0.562,auc:0.700
+root        : INFO     iteration: 25000, train time: 18.783 s, validate time: 10.066 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_25000_iters.tar
+root        : INFO     tr_acc: 0.736, tr_loss: 0.658,auc:0.796
+root        : INFO     va_acc: 0.634, va_loss: 0.760,auc:0.654
+root        : INFO     iteration: 25100, train time: 23.896 s, validate time: 10.273 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.751, tr_loss: 0.537,auc:0.812
+root        : INFO     va_acc: 0.676, va_loss: 0.618,auc:0.669
+root        : INFO     iteration: 25200, train time: 17.604 s, validate time: 10.324 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.719, tr_loss: 0.552,auc:0.810
+root        : INFO     va_acc: 0.599, va_loss: 0.594,auc:0.665
+root        : INFO     iteration: 25300, train time: 20.807 s, validate time: 12.127 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.720, tr_loss: 0.498,auc:0.815
+root        : INFO     va_acc: 0.633, va_loss: 0.567,auc:0.667
+root        : INFO     iteration: 25400, train time: 22.219 s, validate time: 9.830 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.755, tr_loss: 0.613,auc:0.811
+root        : INFO     va_acc: 0.652, va_loss: 0.706,auc:0.624
+root        : INFO     iteration: 25500, train time: 21.918 s, validate time: 11.135 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.745, tr_loss: 0.652,auc:0.809
+root        : INFO     va_acc: 0.626, va_loss: 0.754,auc:0.625
+root        : INFO     iteration: 25600, train time: 19.872 s, validate time: 10.183 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.743, tr_loss: 0.543,auc:0.808
+root        : INFO     va_acc: 0.670, va_loss: 0.610,auc:0.694
+root        : INFO     iteration: 25700, train time: 21.072 s, validate time: 11.035 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.756, tr_loss: 0.547,auc:0.813
+root        : INFO     va_acc: 0.648, va_loss: 0.654,auc:0.677
+root        : INFO     iteration: 25800, train time: 18.536 s, validate time: 10.454 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.723, tr_loss: 0.423,auc:0.819
+root        : INFO     va_acc: 0.646, va_loss: 0.483,auc:0.678
+root        : INFO     iteration: 25900, train time: 18.590 s, validate time: 10.228 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.774, tr_loss: 0.642,auc:0.816
+root        : INFO     va_acc: 0.666, va_loss: 0.732,auc:0.673
+root        : INFO     iteration: 26000, train time: 18.973 s, validate time: 10.545 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_26000_iters.tar
+root        : INFO     tr_acc: 0.655, tr_loss: 0.946,auc:0.812
+root        : INFO     va_acc: 0.571, va_loss: 1.076,auc:0.639
+root        : INFO     iteration: 26100, train time: 22.912 s, validate time: 10.862 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.756, tr_loss: 0.480,auc:0.817
+root        : INFO     va_acc: 0.648, va_loss: 0.566,auc:0.637
+root        : INFO     iteration: 26200, train time: 18.397 s, validate time: 9.843 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.759, tr_loss: 0.614,auc:0.817
+root        : INFO     va_acc: 0.647, va_loss: 0.697,auc:0.671
+root        : INFO     iteration: 26300, train time: 17.801 s, validate time: 9.921 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.708, tr_loss: 0.784,auc:0.823
+root        : INFO     va_acc: 0.619, va_loss: 0.890,auc:0.679
+root        : INFO     iteration: 26400, train time: 21.194 s, validate time: 9.361 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.735, tr_loss: 0.452,auc:0.824
+root        : INFO     va_acc: 0.624, va_loss: 0.514,auc:0.673
+root        : INFO     iteration: 26500, train time: 19.921 s, validate time: 10.728 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.757, tr_loss: 0.486,auc:0.829
+root        : INFO     va_acc: 0.662, va_loss: 0.577,auc:0.691
+root        : INFO     iteration: 26600, train time: 19.198 s, validate time: 10.972 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.771, tr_loss: 0.516,auc:0.832
+root        : INFO     va_acc: 0.674, va_loss: 0.635,auc:0.654
+root        : INFO     iteration: 26700, train time: 18.842 s, validate time: 12.102 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.782, tr_loss: 0.501,auc:0.841
+root        : INFO     va_acc: 0.640, va_loss: 0.610,auc:0.686
+root        : INFO     iteration: 26800, train time: 18.376 s, validate time: 10.417 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.786, tr_loss: 0.491,auc:0.835
+root        : INFO     va_acc: 0.673, va_loss: 0.574,auc:0.664
+root        : INFO     iteration: 26900, train time: 18.909 s, validate time: 10.541 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.758, tr_loss: 0.397,auc:0.837
+root        : INFO     va_acc: 0.654, va_loss: 0.476,auc:0.673
+root        : INFO     iteration: 27000, train time: 19.288 s, validate time: 10.377 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_27000_iters.tar
+root        : INFO     tr_acc: 0.756, tr_loss: 0.422,auc:0.842
+root        : INFO     va_acc: 0.660, va_loss: 0.506,auc:0.696
+root        : INFO     iteration: 27100, train time: 21.885 s, validate time: 10.200 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.747, tr_loss: 0.394,auc:0.843
+root        : INFO     va_acc: 0.624, va_loss: 0.480,auc:0.673
+root        : INFO     iteration: 27200, train time: 20.578 s, validate time: 11.970 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.805, tr_loss: 0.459,auc:0.843
+root        : INFO     va_acc: 0.669, va_loss: 0.576,auc:0.660
+root        : INFO     iteration: 27300, train time: 20.551 s, validate time: 11.261 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.774, tr_loss: 0.363,auc:0.847
+root        : INFO     va_acc: 0.620, va_loss: 0.457,auc:0.671
+root        : INFO     iteration: 27400, train time: 21.562 s, validate time: 11.021 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.785, tr_loss: 0.594,auc:0.851
+root        : INFO     va_acc: 0.638, va_loss: 0.757,auc:0.677
+root        : INFO     iteration: 27500, train time: 20.429 s, validate time: 11.855 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.804, tr_loss: 0.443,auc:0.855
+root        : INFO     va_acc: 0.676, va_loss: 0.537,auc:0.669
+root        : INFO     iteration: 27600, train time: 20.757 s, validate time: 12.217 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.785, tr_loss: 0.429,auc:0.855
+root        : INFO     va_acc: 0.658, va_loss: 0.544,auc:0.669
+root        : INFO     iteration: 27700, train time: 20.478 s, validate time: 10.528 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.794, tr_loss: 0.434,auc:0.841
+root        : INFO     va_acc: 0.660, va_loss: 0.532,auc:0.645
+root        : INFO     iteration: 27800, train time: 19.936 s, validate time: 11.335 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.799, tr_loss: 0.439,auc:0.854
+root        : INFO     va_acc: 0.636, va_loss: 0.567,auc:0.661
+root        : INFO     iteration: 27900, train time: 20.506 s, validate time: 12.017 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.776, tr_loss: 0.417,auc:0.853
+root        : INFO     va_acc: 0.638, va_loss: 0.503,auc:0.687
+root        : INFO     iteration: 28000, train time: 20.410 s, validate time: 11.463 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_28000_iters.tar
+root        : INFO     tr_acc: 0.754, tr_loss: 0.386,auc:0.857
+root        : INFO     va_acc: 0.633, va_loss: 0.480,auc:0.659
+root        : INFO     iteration: 28100, train time: 22.212 s, validate time: 11.604 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.808, tr_loss: 0.418,auc:0.863
+root        : INFO     va_acc: 0.640, va_loss: 0.537,auc:0.684
+root        : INFO     iteration: 28200, train time: 19.703 s, validate time: 12.077 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.801, tr_loss: 0.452,auc:0.867
+root        : INFO     va_acc: 0.647, va_loss: 0.565,auc:0.714
+root        : INFO     iteration: 28300, train time: 20.099 s, validate time: 11.531 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.809, tr_loss: 0.479,auc:0.871
+root        : INFO     va_acc: 0.646, va_loss: 0.645,auc:0.692
+root        : INFO     iteration: 28400, train time: 19.131 s, validate time: 10.351 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.816, tr_loss: 0.403,auc:0.868
+root        : INFO     va_acc: 0.655, va_loss: 0.536,auc:0.694
+root        : INFO     iteration: 28500, train time: 18.546 s, validate time: 11.361 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.822, tr_loss: 0.430,auc:0.872
+root        : INFO     va_acc: 0.653, va_loss: 0.553,auc:0.684
+root        : INFO     iteration: 28600, train time: 19.858 s, validate time: 10.742 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.808, tr_loss: 0.415,auc:0.871
+root        : INFO     va_acc: 0.652, va_loss: 0.553,auc:0.694
+root        : INFO     iteration: 28700, train time: 20.353 s, validate time: 9.946 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.822, tr_loss: 0.478,auc:0.871
+root        : INFO     va_acc: 0.653, va_loss: 0.651,auc:0.709
+root        : INFO     iteration: 28800, train time: 19.449 s, validate time: 10.500 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.824, tr_loss: 0.433,auc:0.873
+root        : INFO     va_acc: 0.653, va_loss: 0.600,auc:0.675
+root        : INFO     iteration: 28900, train time: 18.251 s, validate time: 10.742 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.811, tr_loss: 0.414,auc:0.871
+root        : INFO     va_acc: 0.641, va_loss: 0.589,auc:0.687
+root        : INFO     iteration: 29000, train time: 21.329 s, validate time: 10.535 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_29000_iters.tar
+root        : INFO     tr_acc: 0.840, tr_loss: 0.389,auc:0.878
+root        : INFO     va_acc: 0.669, va_loss: 0.522,auc:0.678
+root        : INFO     iteration: 29100, train time: 22.324 s, validate time: 10.384 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.827, tr_loss: 0.323,auc:0.880
+root        : INFO     va_acc: 0.664, va_loss: 0.466,auc:0.673
+root        : INFO     iteration: 29200, train time: 18.294 s, validate time: 9.793 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.800, tr_loss: 0.363,auc:0.880
+root        : INFO     va_acc: 0.607, va_loss: 0.495,auc:0.693
+root        : INFO     iteration: 29300, train time: 18.331 s, validate time: 11.256 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.814, tr_loss: 0.497,auc:0.873
+root        : INFO     va_acc: 0.682, va_loss: 0.666,auc:0.693
+root        : INFO     iteration: 29400, train time: 20.294 s, validate time: 10.197 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.806, tr_loss: 0.492,auc:0.871
+root        : INFO     va_acc: 0.667, va_loss: 0.678,auc:0.685
+root        : INFO     iteration: 29500, train time: 19.865 s, validate time: 10.919 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.831, tr_loss: 0.441,auc:0.877
+root        : INFO     va_acc: 0.655, va_loss: 0.583,auc:0.722
+root        : INFO     iteration: 29600, train time: 20.662 s, validate time: 10.437 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.832, tr_loss: 0.454,auc:0.892
+root        : INFO     va_acc: 0.658, va_loss: 0.617,auc:0.731
+root        : INFO     iteration: 29700, train time: 21.393 s, validate time: 11.995 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.838, tr_loss: 0.433,auc:0.905
+root        : INFO     va_acc: 0.633, va_loss: 0.606,auc:0.721
+root        : INFO     iteration: 29800, train time: 20.981 s, validate time: 11.011 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.760, tr_loss: 0.352,auc:0.882
+root        : INFO     va_acc: 0.605, va_loss: 0.459,auc:0.696
+root        : INFO     iteration: 29900, train time: 20.259 s, validate time: 10.488 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.851, tr_loss: 0.390,auc:0.888
+root        : INFO     va_acc: 0.640, va_loss: 0.542,auc:0.698
+root        : INFO     iteration: 30000, train time: 21.670 s, validate time: 10.074 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_30000_iters.tar
+root        : INFO     tr_acc: 0.845, tr_loss: 0.494,auc:0.887
+root        : INFO     va_acc: 0.629, va_loss: 0.703,auc:0.678
+root        : INFO     iteration: 30100, train time: 20.663 s, validate time: 10.506 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.807, tr_loss: 0.394,auc:0.903
+root        : INFO     va_acc: 0.633, va_loss: 0.557,auc:0.710
+root        : INFO     iteration: 30200, train time: 20.689 s, validate time: 10.750 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.823, tr_loss: 0.346,auc:0.912
+root        : INFO     va_acc: 0.648, va_loss: 0.488,auc:0.722
+root        : INFO     iteration: 30300, train time: 19.437 s, validate time: 11.205 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.855, tr_loss: 0.382,auc:0.904
+root        : INFO     va_acc: 0.635, va_loss: 0.558,auc:0.717
+root        : INFO     iteration: 30400, train time: 20.569 s, validate time: 11.425 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.849, tr_loss: 0.354,auc:0.918
+root        : INFO     va_acc: 0.646, va_loss: 0.530,auc:0.715
+root        : INFO     iteration: 30500, train time: 19.602 s, validate time: 10.794 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.840, tr_loss: 0.376,auc:0.903
+root        : INFO     va_acc: 0.638, va_loss: 0.511,auc:0.693
+root        : INFO     iteration: 30600, train time: 21.578 s, validate time: 11.741 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.823, tr_loss: 0.323,auc:0.909
+root        : INFO     va_acc: 0.638, va_loss: 0.473,auc:0.709
+root        : INFO     iteration: 30700, train time: 22.493 s, validate time: 11.793 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.828, tr_loss: 0.325,auc:0.921
+root        : INFO     va_acc: 0.634, va_loss: 0.470,auc:0.692
+root        : INFO     iteration: 30800, train time: 20.586 s, validate time: 11.410 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.843, tr_loss: 0.354,auc:0.915
+root        : INFO     va_acc: 0.638, va_loss: 0.534,auc:0.697
+root        : INFO     iteration: 30900, train time: 21.849 s, validate time: 9.731 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.853, tr_loss: 0.351,auc:0.921
+root        : INFO     va_acc: 0.631, va_loss: 0.539,auc:0.725
+root        : INFO     iteration: 31000, train time: 22.422 s, validate time: 10.688 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_31000_iters.tar
+root        : INFO     tr_acc: 0.836, tr_loss: 0.393,auc:0.903
+root        : INFO     va_acc: 0.602, va_loss: 0.573,auc:0.704
+root        : INFO     iteration: 31100, train time: 23.257 s, validate time: 13.336 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.851, tr_loss: 0.463,auc:0.908
+root        : INFO     va_acc: 0.622, va_loss: 0.691,auc:0.693
+root        : INFO     iteration: 31200, train time: 20.985 s, validate time: 11.660 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.849, tr_loss: 0.337,auc:0.914
+root        : INFO     va_acc: 0.597, va_loss: 0.515,auc:0.686
+root        : INFO     iteration: 31300, train time: 19.574 s, validate time: 10.983 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.848, tr_loss: 0.330,auc:0.919
+root        : INFO     va_acc: 0.631, va_loss: 0.529,auc:0.700
+root        : INFO     iteration: 31400, train time: 20.143 s, validate time: 10.679 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.800, tr_loss: 0.626,auc:0.905
+root        : INFO     va_acc: 0.622, va_loss: 0.843,auc:0.690
+root        : INFO     iteration: 31500, train time: 20.571 s, validate time: 11.048 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.864, tr_loss: 0.353,auc:0.921
+root        : INFO     va_acc: 0.651, va_loss: 0.560,auc:0.703
+root        : INFO     iteration: 31600, train time: 19.325 s, validate time: 10.129 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.877, tr_loss: 0.363,auc:0.931
+root        : INFO     va_acc: 0.639, va_loss: 0.606,auc:0.689
+root        : INFO     iteration: 31700, train time: 19.841 s, validate time: 13.002 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.834, tr_loss: 0.514,auc:0.900
+root        : INFO     va_acc: 0.675, va_loss: 0.730,auc:0.705
+root        : INFO     iteration: 31800, train time: 20.171 s, validate time: 11.112 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.808, tr_loss: 0.328,auc:0.842
+root        : INFO     va_acc: 0.617, va_loss: 0.444,auc:0.633
+root        : INFO     iteration: 31900, train time: 20.075 s, validate time: 12.214 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.869, tr_loss: 0.310,auc:0.931
+root        : INFO     va_acc: 0.648, va_loss: 0.497,auc:0.698
+root        : INFO     iteration: 32000, train time: 19.892 s, validate time: 10.447 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_32000_iters.tar
+root        : INFO     tr_acc: 0.881, tr_loss: 0.347,auc:0.927
+root        : INFO     va_acc: 0.637, va_loss: 0.567,auc:0.655
+root        : INFO     iteration: 32100, train time: 24.234 s, validate time: 12.078 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.876, tr_loss: 0.334,auc:0.929
+root        : INFO     va_acc: 0.636, va_loss: 0.544,auc:0.619
+root        : INFO     iteration: 32200, train time: 20.356 s, validate time: 10.876 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.880, tr_loss: 0.329,auc:0.929
+root        : INFO     va_acc: 0.611, va_loss: 0.567,auc:0.701
+root        : INFO     iteration: 32300, train time: 19.364 s, validate time: 11.661 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.883, tr_loss: 0.387,auc:0.938
+root        : INFO     va_acc: 0.620, va_loss: 0.635,auc:0.710
+root        : INFO     iteration: 32400, train time: 18.412 s, validate time: 10.794 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.875, tr_loss: 0.329,auc:0.928
+root        : INFO     va_acc: 0.650, va_loss: 0.544,auc:0.691
+root        : INFO     iteration: 32500, train time: 19.738 s, validate time: 10.548 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.880, tr_loss: 0.332,auc:0.932
+root        : INFO     va_acc: 0.631, va_loss: 0.563,auc:0.735
+root        : INFO     iteration: 32600, train time: 18.440 s, validate time: 12.136 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.882, tr_loss: 0.313,auc:0.937
+root        : INFO     va_acc: 0.616, va_loss: 0.546,auc:0.731
+root        : INFO     iteration: 32700, train time: 19.470 s, validate time: 10.503 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.880, tr_loss: 0.302,auc:0.939
+root        : INFO     va_acc: 0.641, va_loss: 0.537,auc:0.691
+root        : INFO     iteration: 32800, train time: 18.696 s, validate time: 9.897 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.874, tr_loss: 0.311,auc:0.939
+root        : INFO     va_acc: 0.605, va_loss: 0.584,auc:0.689
+root        : INFO     iteration: 32900, train time: 18.663 s, validate time: 9.457 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.879, tr_loss: 0.275,auc:0.938
+root        : INFO     va_acc: 0.624, va_loss: 0.469,auc:0.680
+root        : INFO     iteration: 33000, train time: 20.279 s, validate time: 11.424 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_33000_iters.tar
+root        : INFO     tr_acc: 0.877, tr_loss: 0.271,auc:0.940
+root        : INFO     va_acc: 0.602, va_loss: 0.496,auc:0.621
+root        : INFO     iteration: 33100, train time: 23.450 s, validate time: 9.688 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.846, tr_loss: 0.276,auc:0.912
+root        : INFO     va_acc: 0.586, va_loss: 0.465,auc:0.592
+root        : INFO     iteration: 33200, train time: 21.309 s, validate time: 11.438 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.905, tr_loss: 0.292,auc:0.950
+root        : INFO     va_acc: 0.615, va_loss: 0.566,auc:0.662
+root        : INFO     iteration: 33300, train time: 21.003 s, validate time: 11.014 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.905, tr_loss: 0.320,auc:0.949
+root        : INFO     va_acc: 0.643, va_loss: 0.598,auc:0.716
+root        : INFO     iteration: 33400, train time: 19.387 s, validate time: 11.192 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.859, tr_loss: 0.269,auc:0.945
+root        : INFO     va_acc: 0.590, va_loss: 0.472,auc:0.596
+root        : INFO     iteration: 33500, train time: 21.153 s, validate time: 11.324 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.890, tr_loss: 0.310,auc:0.936
+root        : INFO     va_acc: 0.619, va_loss: 0.552,auc:0.671
+root        : INFO     iteration: 33600, train time: 20.658 s, validate time: 10.965 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.895, tr_loss: 0.263,auc:0.950
+root        : INFO     va_acc: 0.626, va_loss: 0.472,auc:0.642
+root        : INFO     iteration: 33700, train time: 22.029 s, validate time: 11.495 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.894, tr_loss: 0.305,auc:0.945
+root        : INFO     va_acc: 0.622, va_loss: 0.550,auc:0.627
+root        : INFO     iteration: 33800, train time: 20.371 s, validate time: 10.460 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.905, tr_loss: 0.283,auc:0.952
+root        : INFO     va_acc: 0.624, va_loss: 0.546,auc:0.625
+root        : INFO     iteration: 33900, train time: 20.853 s, validate time: 10.715 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.905, tr_loss: 0.295,auc:0.958
+root        : INFO     va_acc: 0.648, va_loss: 0.569,auc:0.644
+root        : INFO     iteration: 34000, train time: 21.041 s, validate time: 12.623 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_34000_iters.tar
+root        : INFO     tr_acc: 0.830, tr_loss: 0.272,auc:0.851
+root        : INFO     va_acc: 0.573, va_loss: 0.446,auc:0.569
+root        : INFO     iteration: 34100, train time: 27.615 s, validate time: 10.615 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.897, tr_loss: 0.370,auc:0.952
+root        : INFO     va_acc: 0.654, va_loss: 0.668,auc:0.689
+root        : INFO     iteration: 34200, train time: 19.661 s, validate time: 10.275 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.882, tr_loss: 0.293,auc:0.929
+root        : INFO     va_acc: 0.600, va_loss: 0.496,auc:0.577
+root        : INFO     iteration: 34300, train time: 20.390 s, validate time: 12.004 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.879, tr_loss: 0.254,auc:0.948
+root        : INFO     va_acc: 0.588, va_loss: 0.501,auc:0.578
+root        : INFO     iteration: 34400, train time: 19.111 s, validate time: 10.957 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.889, tr_loss: 0.273,auc:0.940
+root        : INFO     va_acc: 0.598, va_loss: 0.529,auc:0.576
+root        : INFO     iteration: 34500, train time: 19.573 s, validate time: 10.644 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.877, tr_loss: 0.293,auc:0.916
+root        : INFO     va_acc: 0.604, va_loss: 0.481,auc:0.629
+root        : INFO     iteration: 34600, train time: 18.615 s, validate time: 11.468 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.909, tr_loss: 0.267,auc:0.949
+root        : INFO     va_acc: 0.620, va_loss: 0.509,auc:0.605
+root        : INFO     iteration: 34700, train time: 20.099 s, validate time: 11.496 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.893, tr_loss: 0.345,auc:0.945
+root        : INFO     va_acc: 0.617, va_loss: 0.589,auc:0.668
+root        : INFO     iteration: 34800, train time: 20.633 s, validate time: 11.541 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.828, tr_loss: 0.322,auc:0.832
+root        : INFO     va_acc: 0.571, va_loss: 0.472,auc:0.562
+root        : INFO     iteration: 34900, train time: 20.385 s, validate time: 11.198 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.919, tr_loss: 0.294,auc:0.956
+root        : INFO     va_acc: 0.625, va_loss: 0.593,auc:0.607
+root        : INFO     iteration: 35000, train time: 19.066 s, validate time: 10.223 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_35000_iters.tar
+root        : INFO     tr_acc: 0.873, tr_loss: 0.293,auc:0.927
+root        : INFO     va_acc: 0.614, va_loss: 0.497,auc:0.617
+root        : INFO     iteration: 35100, train time: 22.397 s, validate time: 9.947 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.897, tr_loss: 0.295,auc:0.961
+root        : INFO     va_acc: 0.611, va_loss: 0.576,auc:0.611
+root        : INFO     iteration: 35200, train time: 18.241 s, validate time: 11.597 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.913, tr_loss: 0.298,auc:0.958
+root        : INFO     va_acc: 0.611, va_loss: 0.533,auc:0.640
+root        : INFO     iteration: 35300, train time: 19.992 s, validate time: 11.004 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.875, tr_loss: 0.247,auc:0.951
+root        : INFO     va_acc: 0.616, va_loss: 0.430,auc:0.588
+root        : INFO     iteration: 35400, train time: 19.069 s, validate time: 10.790 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.923, tr_loss: 0.259,auc:0.962
+root        : INFO     va_acc: 0.619, va_loss: 0.552,auc:0.611
+root        : INFO     iteration: 35500, train time: 20.701 s, validate time: 9.620 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.901, tr_loss: 0.245,auc:0.948
+root        : INFO     va_acc: 0.586, va_loss: 0.517,auc:0.590
+root        : INFO     iteration: 35600, train time: 19.194 s, validate time: 10.401 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.890, tr_loss: 0.395,auc:0.947
+root        : INFO     va_acc: 0.645, va_loss: 0.716,auc:0.673
+root        : INFO     iteration: 35700, train time: 20.513 s, validate time: 11.538 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.276,auc:0.956
+root        : INFO     va_acc: 0.612, va_loss: 0.536,auc:0.666
+root        : INFO     iteration: 35800, train time: 18.898 s, validate time: 11.271 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.909, tr_loss: 0.274,auc:0.960
+root        : INFO     va_acc: 0.619, va_loss: 0.585,auc:0.663
+root        : INFO     iteration: 35900, train time: 20.142 s, validate time: 10.854 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.275,auc:0.963
+root        : INFO     va_acc: 0.628, va_loss: 0.542,auc:0.629
+root        : INFO     iteration: 36000, train time: 21.932 s, validate time: 10.492 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_36000_iters.tar
+root        : INFO     tr_acc: 0.912, tr_loss: 0.301,auc:0.955
+root        : INFO     va_acc: 0.618, va_loss: 0.566,auc:0.608
+root        : INFO     iteration: 36100, train time: 23.176 s, validate time: 10.389 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.914, tr_loss: 0.283,auc:0.958
+root        : INFO     va_acc: 0.634, va_loss: 0.587,auc:0.614
+root        : INFO     iteration: 36200, train time: 22.218 s, validate time: 11.095 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.908, tr_loss: 0.284,auc:0.964
+root        : INFO     va_acc: 0.624, va_loss: 0.597,auc:0.656
+root        : INFO     iteration: 36300, train time: 18.744 s, validate time: 10.896 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.920, tr_loss: 0.325,auc:0.956
+root        : INFO     va_acc: 0.655, va_loss: 0.626,auc:0.697
+root        : INFO     iteration: 36400, train time: 18.594 s, validate time: 10.252 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.899, tr_loss: 0.278,auc:0.945
+root        : INFO     va_acc: 0.641, va_loss: 0.522,auc:0.590
+root        : INFO     iteration: 36500, train time: 19.113 s, validate time: 9.705 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.914, tr_loss: 0.270,auc:0.966
+root        : INFO     va_acc: 0.612, va_loss: 0.582,auc:0.612
+root        : INFO     iteration: 36600, train time: 17.705 s, validate time: 10.644 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.287,auc:0.966
+root        : INFO     va_acc: 0.626, va_loss: 0.606,auc:0.648
+root        : INFO     iteration: 36700, train time: 18.328 s, validate time: 10.865 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.274,auc:0.966
+root        : INFO     va_acc: 0.597, va_loss: 0.577,auc:0.636
+root        : INFO     iteration: 36800, train time: 17.846 s, validate time: 9.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.919, tr_loss: 0.272,auc:0.962
+root        : INFO     va_acc: 0.562, va_loss: 0.569,auc:0.592
+root        : INFO     iteration: 36900, train time: 19.078 s, validate time: 10.856 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.362,auc:0.961
+root        : INFO     va_acc: 0.679, va_loss: 0.688,auc:0.671
+root        : INFO     iteration: 37000, train time: 19.124 s, validate time: 10.933 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_37000_iters.tar
+root        : INFO     tr_acc: 0.917, tr_loss: 0.275,auc:0.964
+root        : INFO     va_acc: 0.632, va_loss: 0.553,auc:0.663
+root        : INFO     iteration: 37100, train time: 22.180 s, validate time: 10.451 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.301,auc:0.967
+root        : INFO     va_acc: 0.619, va_loss: 0.633,auc:0.647
+root        : INFO     iteration: 37200, train time: 19.530 s, validate time: 9.399 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.346,auc:0.964
+root        : INFO     va_acc: 0.651, va_loss: 0.663,auc:0.682
+root        : INFO     iteration: 37300, train time: 18.772 s, validate time: 11.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.911, tr_loss: 0.339,auc:0.963
+root        : INFO     va_acc: 0.658, va_loss: 0.641,auc:0.692
+root        : INFO     iteration: 37400, train time: 18.015 s, validate time: 9.919 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.252,auc:0.968
+root        : INFO     va_acc: 0.580, va_loss: 0.513,auc:0.593
+root        : INFO     iteration: 37500, train time: 17.971 s, validate time: 10.352 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.924, tr_loss: 0.285,auc:0.967
+root        : INFO     va_acc: 0.619, va_loss: 0.602,auc:0.676
+root        : INFO     iteration: 37600, train time: 19.602 s, validate time: 11.245 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.908, tr_loss: 0.317,auc:0.960
+root        : INFO     va_acc: 0.605, va_loss: 0.652,auc:0.632
+root        : INFO     iteration: 37700, train time: 19.050 s, validate time: 11.947 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.917, tr_loss: 0.279,auc:0.967
+root        : INFO     va_acc: 0.591, va_loss: 0.629,auc:0.639
+root        : INFO     iteration: 37800, train time: 18.717 s, validate time: 11.012 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.286,auc:0.971
+root        : INFO     va_acc: 0.588, va_loss: 0.599,auc:0.625
+root        : INFO     iteration: 37900, train time: 18.271 s, validate time: 9.836 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.910, tr_loss: 0.376,auc:0.961
+root        : INFO     va_acc: 0.679, va_loss: 0.692,auc:0.705
+root        : INFO     iteration: 38000, train time: 18.367 s, validate time: 10.904 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_38000_iters.tar
+root        : INFO     tr_acc: 0.915, tr_loss: 0.276,auc:0.954
+root        : INFO     va_acc: 0.560, va_loss: 0.536,auc:0.590
+root        : INFO     iteration: 38100, train time: 21.601 s, validate time: 10.889 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.904, tr_loss: 0.253,auc:0.960
+root        : INFO     va_acc: 0.564, va_loss: 0.508,auc:0.558
+root        : INFO     iteration: 38200, train time: 20.689 s, validate time: 10.789 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.930, tr_loss: 0.289,auc:0.965
+root        : INFO     va_acc: 0.597, va_loss: 0.559,auc:0.670
+root        : INFO     iteration: 38300, train time: 20.516 s, validate time: 11.154 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.256,auc:0.970
+root        : INFO     va_acc: 0.582, va_loss: 0.529,auc:0.574
+root        : INFO     iteration: 38400, train time: 19.986 s, validate time: 11.863 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.259,auc:0.963
+root        : INFO     va_acc: 0.594, va_loss: 0.523,auc:0.607
+root        : INFO     iteration: 38500, train time: 19.528 s, validate time: 11.617 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.931, tr_loss: 0.260,auc:0.968
+root        : INFO     va_acc: 0.624, va_loss: 0.567,auc:0.689
+root        : INFO     iteration: 38600, train time: 21.193 s, validate time: 11.539 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.914, tr_loss: 0.248,auc:0.972
+root        : INFO     va_acc: 0.592, va_loss: 0.530,auc:0.629
+root        : INFO     iteration: 38700, train time: 19.768 s, validate time: 10.564 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.896, tr_loss: 0.235,auc:0.956
+root        : INFO     va_acc: 0.580, va_loss: 0.503,auc:0.566
+root        : INFO     iteration: 38800, train time: 21.903 s, validate time: 12.961 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.888, tr_loss: 0.246,auc:0.959
+root        : INFO     va_acc: 0.602, va_loss: 0.517,auc:0.622
+root        : INFO     iteration: 38900, train time: 20.106 s, validate time: 10.765 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.915, tr_loss: 0.269,auc:0.970
+root        : INFO     va_acc: 0.610, va_loss: 0.565,auc:0.625
+root        : INFO     iteration: 39000, train time: 19.560 s, validate time: 12.048 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_39000_iters.tar
+root        : INFO     tr_acc: 0.923, tr_loss: 0.282,auc:0.974
+root        : INFO     va_acc: 0.595, va_loss: 0.628,auc:0.642
+root        : INFO     iteration: 39100, train time: 24.379 s, validate time: 11.424 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.929, tr_loss: 0.254,auc:0.974
+root        : INFO     va_acc: 0.590, va_loss: 0.563,auc:0.642
+root        : INFO     iteration: 39200, train time: 22.014 s, validate time: 11.824 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.938, tr_loss: 0.253,auc:0.971
+root        : INFO     va_acc: 0.609, va_loss: 0.618,auc:0.650
+root        : INFO     iteration: 39300, train time: 20.036 s, validate time: 11.253 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.938, tr_loss: 0.262,auc:0.976
+root        : INFO     va_acc: 0.590, va_loss: 0.585,auc:0.623
+root        : INFO     iteration: 39400, train time: 19.682 s, validate time: 10.941 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.924, tr_loss: 0.260,auc:0.968
+root        : INFO     va_acc: 0.612, va_loss: 0.530,auc:0.580
+root        : INFO     iteration: 39500, train time: 19.165 s, validate time: 11.701 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.936, tr_loss: 0.285,auc:0.973
+root        : INFO     va_acc: 0.634, va_loss: 0.575,auc:0.625
+root        : INFO     iteration: 39600, train time: 19.031 s, validate time: 10.272 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.936, tr_loss: 0.268,auc:0.974
+root        : INFO     va_acc: 0.606, va_loss: 0.562,auc:0.594
+root        : INFO     iteration: 39700, train time: 19.605 s, validate time: 12.064 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.932, tr_loss: 0.254,auc:0.973
+root        : INFO     va_acc: 0.628, va_loss: 0.527,auc:0.599
+root        : INFO     iteration: 39800, train time: 20.388 s, validate time: 10.359 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.928, tr_loss: 0.249,auc:0.972
+root        : INFO     va_acc: 0.598, va_loss: 0.514,auc:0.590
+root        : INFO     iteration: 39900, train time: 19.854 s, validate time: 11.238 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.928, tr_loss: 0.249,auc:0.971
+root        : INFO     va_acc: 0.570, va_loss: 0.522,auc:0.614
+root        : INFO     iteration: 40000, train time: 19.489 s, validate time: 10.062 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_40000_iters.tar
+root        : INFO     tr_acc: 0.933, tr_loss: 0.239,auc:0.973
+root        : INFO     va_acc: 0.624, va_loss: 0.535,auc:0.596
+root        : INFO     iteration: 40100, train time: 21.866 s, validate time: 11.039 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.261,auc:0.971
+root        : INFO     va_acc: 0.640, va_loss: 0.610,auc:0.638
+root        : INFO     iteration: 40200, train time: 21.501 s, validate time: 10.499 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.240,auc:0.974
+root        : INFO     va_acc: 0.592, va_loss: 0.587,auc:0.637
+root        : INFO     iteration: 40300, train time: 20.637 s, validate time: 9.825 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.250,auc:0.970
+root        : INFO     va_acc: 0.618, va_loss: 0.599,auc:0.679
+root        : INFO     iteration: 40400, train time: 18.584 s, validate time: 10.263 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.926, tr_loss: 0.239,auc:0.963
+root        : INFO     va_acc: 0.572, va_loss: 0.554,auc:0.594
+root        : INFO     iteration: 40500, train time: 19.603 s, validate time: 10.775 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.929, tr_loss: 0.251,auc:0.975
+root        : INFO     va_acc: 0.616, va_loss: 0.558,auc:0.620
+root        : INFO     iteration: 40600, train time: 19.714 s, validate time: 10.753 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.253,auc:0.975
+root        : INFO     va_acc: 0.621, va_loss: 0.649,auc:0.674
+root        : INFO     iteration: 40700, train time: 18.882 s, validate time: 12.034 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.929, tr_loss: 0.274,auc:0.975
+root        : INFO     va_acc: 0.622, va_loss: 0.634,auc:0.644
+root        : INFO     iteration: 40800, train time: 19.817 s, validate time: 11.889 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.267,auc:0.974
+root        : INFO     va_acc: 0.638, va_loss: 0.612,auc:0.629
+root        : INFO     iteration: 40900, train time: 18.674 s, validate time: 9.852 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.932, tr_loss: 0.251,auc:0.976
+root        : INFO     va_acc: 0.624, va_loss: 0.598,auc:0.635
+root        : INFO     iteration: 41000, train time: 17.728 s, validate time: 10.759 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_41000_iters.tar
+root        : INFO     tr_acc: 0.925, tr_loss: 0.228,auc:0.977
+root        : INFO     va_acc: 0.584, va_loss: 0.522,auc:0.573
+root        : INFO     iteration: 41100, train time: 21.888 s, validate time: 11.046 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.941, tr_loss: 0.246,auc:0.974
+root        : INFO     va_acc: 0.638, va_loss: 0.593,auc:0.640
+root        : INFO     iteration: 41200, train time: 20.237 s, validate time: 10.552 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.934, tr_loss: 0.241,auc:0.973
+root        : INFO     va_acc: 0.630, va_loss: 0.554,auc:0.642
+root        : INFO     iteration: 41300, train time: 18.638 s, validate time: 11.647 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.937, tr_loss: 0.253,auc:0.974
+root        : INFO     va_acc: 0.602, va_loss: 0.557,auc:0.623
+root        : INFO     iteration: 41400, train time: 20.364 s, validate time: 11.340 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.937, tr_loss: 0.257,auc:0.975
+root        : INFO     va_acc: 0.588, va_loss: 0.568,auc:0.641
+root        : INFO     iteration: 41500, train time: 22.432 s, validate time: 11.099 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.931, tr_loss: 0.253,auc:0.977
+root        : INFO     va_acc: 0.630, va_loss: 0.570,auc:0.633
+root        : INFO     iteration: 41600, train time: 21.425 s, validate time: 10.994 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.917, tr_loss: 0.284,auc:0.961
+root        : INFO     va_acc: 0.597, va_loss: 0.505,auc:0.567
+root        : INFO     iteration: 41700, train time: 20.951 s, validate time: 10.981 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.246,auc:0.975
+root        : INFO     va_acc: 0.622, va_loss: 0.535,auc:0.619
+root        : INFO     iteration: 41800, train time: 20.454 s, validate time: 10.232 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.934, tr_loss: 0.272,auc:0.976
+root        : INFO     va_acc: 0.598, va_loss: 0.616,auc:0.654
+root        : INFO     iteration: 41900, train time: 20.980 s, validate time: 11.706 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.916, tr_loss: 0.243,auc:0.970
+root        : INFO     va_acc: 0.605, va_loss: 0.509,auc:0.596
+root        : INFO     iteration: 42000, train time: 20.240 s, validate time: 11.370 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_42000_iters.tar
+root        : INFO     tr_acc: 0.942, tr_loss: 0.268,auc:0.978
+root        : INFO     va_acc: 0.631, va_loss: 0.634,auc:0.621
+root        : INFO     iteration: 42100, train time: 23.578 s, validate time: 11.260 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.927, tr_loss: 0.274,auc:0.970
+root        : INFO     va_acc: 0.596, va_loss: 0.545,auc:0.582
+root        : INFO     iteration: 42200, train time: 21.611 s, validate time: 11.813 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.921, tr_loss: 0.243,auc:0.975
+root        : INFO     va_acc: 0.602, va_loss: 0.533,auc:0.568
+root        : INFO     iteration: 42300, train time: 19.593 s, validate time: 12.368 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.939, tr_loss: 0.248,auc:0.979
+root        : INFO     va_acc: 0.586, va_loss: 0.553,auc:0.582
+root        : INFO     iteration: 42400, train time: 20.860 s, validate time: 11.529 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.931, tr_loss: 0.277,auc:0.974
+root        : INFO     va_acc: 0.603, va_loss: 0.656,auc:0.627
+root        : INFO     iteration: 42500, train time: 20.901 s, validate time: 10.915 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.950, tr_loss: 0.247,auc:0.979
+root        : INFO     va_acc: 0.572, va_loss: 0.544,auc:0.572
+root        : INFO     iteration: 42600, train time: 19.179 s, validate time: 10.608 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.929, tr_loss: 0.239,auc:0.974
+root        : INFO     va_acc: 0.581, va_loss: 0.508,auc:0.557
+root        : INFO     iteration: 42700, train time: 20.824 s, validate time: 10.643 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.943, tr_loss: 0.242,auc:0.978
+root        : INFO     va_acc: 0.597, va_loss: 0.593,auc:0.623
+root        : INFO     iteration: 42800, train time: 19.293 s, validate time: 9.953 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.247,auc:0.979
+root        : INFO     va_acc: 0.598, va_loss: 0.589,auc:0.623
+root        : INFO     iteration: 42900, train time: 17.915 s, validate time: 10.291 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.929, tr_loss: 0.274,auc:0.974
+root        : INFO     va_acc: 0.619, va_loss: 0.599,auc:0.667
+root        : INFO     iteration: 43000, train time: 18.810 s, validate time: 10.375 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_43000_iters.tar
+root        : INFO     tr_acc: 0.937, tr_loss: 0.256,auc:0.977
+root        : INFO     va_acc: 0.597, va_loss: 0.591,auc:0.625
+root        : INFO     iteration: 43100, train time: 21.599 s, validate time: 11.119 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.938, tr_loss: 0.247,auc:0.977
+root        : INFO     va_acc: 0.592, va_loss: 0.566,auc:0.615
+root        : INFO     iteration: 43200, train time: 20.607 s, validate time: 10.887 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.938, tr_loss: 0.252,auc:0.980
+root        : INFO     va_acc: 0.598, va_loss: 0.565,auc:0.591
+root        : INFO     iteration: 43300, train time: 18.924 s, validate time: 10.018 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.940, tr_loss: 0.285,auc:0.979
+root        : INFO     va_acc: 0.592, va_loss: 0.621,auc:0.587
+root        : INFO     iteration: 43400, train time: 18.088 s, validate time: 11.030 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.920, tr_loss: 0.313,auc:0.966
+root        : INFO     va_acc: 0.572, va_loss: 0.575,auc:0.565
+root        : INFO     iteration: 43500, train time: 20.320 s, validate time: 10.867 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.933, tr_loss: 0.250,auc:0.982
+root        : INFO     va_acc: 0.584, va_loss: 0.573,auc:0.569
+root        : INFO     iteration: 43600, train time: 19.932 s, validate time: 9.950 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.937, tr_loss: 0.282,auc:0.976
+root        : INFO     va_acc: 0.648, va_loss: 0.614,auc:0.625
+root        : INFO     iteration: 43700, train time: 20.329 s, validate time: 9.654 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.923, tr_loss: 0.272,auc:0.976
+root        : INFO     va_acc: 0.594, va_loss: 0.574,auc:0.601
+root        : INFO     iteration: 43800, train time: 20.516 s, validate time: 12.067 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.937, tr_loss: 0.235,auc:0.981
+root        : INFO     va_acc: 0.596, va_loss: 0.551,auc:0.607
+root        : INFO     iteration: 43900, train time: 20.585 s, validate time: 11.500 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.935, tr_loss: 0.256,auc:0.982
+root        : INFO     va_acc: 0.590, va_loss: 0.581,auc:0.608
+root        : INFO     iteration: 44000, train time: 21.386 s, validate time: 11.499 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_44000_iters.tar
+root        : INFO     tr_acc: 0.941, tr_loss: 0.259,auc:0.980
+root        : INFO     va_acc: 0.606, va_loss: 0.583,auc:0.573
+root        : INFO     iteration: 44100, train time: 23.446 s, validate time: 9.631 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.945, tr_loss: 0.261,auc:0.980
+root        : INFO     va_acc: 0.594, va_loss: 0.565,auc:0.606
+root        : INFO     iteration: 44200, train time: 19.026 s, validate time: 11.180 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.923, tr_loss: 0.260,auc:0.974
+root        : INFO     va_acc: 0.592, va_loss: 0.539,auc:0.562
+root        : INFO     iteration: 44300, train time: 18.989 s, validate time: 11.838 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.946, tr_loss: 0.262,auc:0.982
+root        : INFO     va_acc: 0.596, va_loss: 0.574,auc:0.584
+root        : INFO     iteration: 44400, train time: 18.531 s, validate time: 10.904 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.935, tr_loss: 0.275,auc:0.967
+root        : INFO     va_acc: 0.617, va_loss: 0.556,auc:0.578
+root        : INFO     iteration: 44500, train time: 18.373 s, validate time: 10.794 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.927, tr_loss: 0.280,auc:0.976
+root        : INFO     va_acc: 0.596, va_loss: 0.563,auc:0.573
+root        : INFO     iteration: 44600, train time: 20.513 s, validate time: 10.739 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.939, tr_loss: 0.264,auc:0.981
+root        : INFO     va_acc: 0.620, va_loss: 0.599,auc:0.597
+root        : INFO     iteration: 44700, train time: 19.644 s, validate time: 9.972 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.934, tr_loss: 0.255,auc:0.975
+root        : INFO     va_acc: 0.605, va_loss: 0.541,auc:0.562
+root        : INFO     iteration: 44800, train time: 17.630 s, validate time: 10.568 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.936, tr_loss: 0.285,auc:0.977
+root        : INFO     va_acc: 0.616, va_loss: 0.602,auc:0.646
+root        : INFO     iteration: 44900, train time: 18.643 s, validate time: 9.890 s
+root        : INFO     ------------------------------------
+root        : INFO     tr_acc: 0.927, tr_loss: 0.264,auc:0.981
+root        : INFO     va_acc: 0.602, va_loss: 0.552,auc:0.592
+root        : INFO     iteration: 45000, train time: 18.088 s, validate time: 10.911 s
+root        : INFO     ------------------------------------
+root        : INFO     Model saved to ../../experiment_workspace/Conformer-00/models/models_dev/md_45000_iters.tar
+root        : INFO     Namespace(cuda=True, dataset_dir='../../dataset/', filename='main_pytorch', iteration_max=45000, mode='inference_validation_data', subdir='models_dev', validate=True, workspace='../../experiment_workspace/Conformer-00/')
+root        : INFO     The data contains: 700 training and 300 validation data.
+root        : INFO     Label                         Accuracy
+root        : INFO     ------------------------------------------------
+root        : INFO     0                             0.8977
+root        : INFO     1                             0.3056
+root        : INFO     ------------------------------------------------
+root        : INFO     Average                       0.6016
+root        : INFO     ------------------------------------------------
+root        : INFO     AUC:                          0.5924
+root        : INFO     ------------------------------------------------
+root        : INFO     ------------------------------------------------
+root        : INFO     AUC:                          0.5924
+root        : INFO     ------------------------------------------------
+root        : INFO     Confusion matrix:
+root        : INFO     [	0	,	 	1	]
+root        : INFO     237	27
+root        : INFO     25	11
+root        : INFO     Label_binary                  Accuracy
+root        : INFO     ------------------------------------------------
+param number:
+19305794
+Traceback (most recent call last):
+  File "main_pytorch.py", line 345, in <module>
+    inference_validation_data(args)
+  File "main_pytorch.py", line 297, in inference_validation_data
+    print_accuracy_binary(se, sp, as_score, hs_score, labels)
+  File "/dstore/home/tzhou/Conformer-0/main/../utils/utilities.py", line 235, in print_accuracy_binary
+    logging.info('{:<4}{:<30}{:.4f}'.format('Se: ', ','.join(labels[1:]), se))
+TypeError: sequence item 0: expected str instance, int found
